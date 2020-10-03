@@ -1,5 +1,5 @@
 # Exercism
-[](https://exercism.io/profiles/c6p)
+[My exercism profile: c6p](https://exercism.io/profiles/c6p)
 
 ### acronym
 

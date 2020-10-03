@@ -21,7 +21,7 @@ def readall(path):
   with open(path,mode='r') as f:
     return f.read()
 
-md = '# Exercism\n[](https://exercism.io/profiles/c6p)\n\n'
+md = '# Exercism\n[My exercism profile: c6p](https://exercism.io/profiles/c6p)\n\n'
 for exercise, langs in sorted(exercises.items()):
   md += '### {0}\n\n'.format(exercise)  # title
   files = [(path.join(ROOT, l, exercise, rules[l](exercise)), l) for l in langs]

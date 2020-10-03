@@ -3,7 +3,7 @@
 # mkdocs: https://www.mkdocs.org/user-guide/configuration/
 
 site_name: c6p - log
-site_url: https://c6p.github.io/log/
+site_url: https://c6p.github.io
 extra_css: 
   - assets/extra.css
 theme:
