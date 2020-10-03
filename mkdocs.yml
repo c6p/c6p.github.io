@@ -2,25 +2,24 @@
 # mkdocs-material: https://squidfunk.github.io/mkdocs-material/
 # mkdocs: https://www.mkdocs.org/user-guide/configuration/
 
-site_name: Foam-mkdocs-template
+site_name: c6p - log
+extra_css: 
+  - assets/extra.css
 theme:
   name: material
   #  favicon: attachment/portrait.png
-  language: zh # 中文，解决中文搜索问题
+  language: en
   features:
     - navigation.expand 
     - tabs 
 markdown_extensions: 
-  - attr_list # https://squidfunk.github.io/mkdocs-material/reference/images/
-  - pymdownx.tabbed  # https://squidfunk.github.io/mkdocs-material/reference/content-tabs/
+  - attr_list
+  - pymdownx.tabbed
   - nl2br # newline-to-break 
   - toc:
       permalink: '#' # heading anchor 
-      slugify: !!python/name:pymdownx.slugs.uslugify # 解决中文标题解析问题
+      slugify: !!python/name:pymdownx.slugs.uslugify
   - admonition
-  - codehilite:
-      guess_lang: false
-      linenums: false
   - footnotes
   - meta
   - def_list
@@ -32,6 +31,8 @@ markdown_extensions:
   - pymdownx.details
   # - pymdownx.emoji:
       # emoji_generator: !!python/name:pymdownx.emoji.to_png
+  - pymdownx.highlight:
+      linenums: true
   - pymdownx.inlinehilite
   - pymdownx.magiclink
   - pymdownx.mark

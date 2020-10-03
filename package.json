@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "exercism-update": "python scripts/exercism_markdown.py > docs/learning/exercism.md"
+  }
+}
