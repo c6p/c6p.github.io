@@ -4,6 +4,7 @@
 ### acronym
 
 === "python"
+    Convert a phrase to its acronym. - [view](https://exercism.io/tracks/python/exercises/acronym)
     ```python
     import re
 
@@ -21,6 +22,7 @@
 ### all-your-base
 
 === "javascript"
+    Convert a number, represented as a sequence of digits in one base, to any other base. - [view](https://exercism.io/tracks/javascript/exercises/all-your-base)
     ```javascript
     export function convert(arr, from, to) {
       if (!Number.isInteger(from) || from < 2)
@@ -46,6 +48,7 @@
 ### allergies
 
 === "python"
+    Given a person's allergy score, determine whether or not they're allergic to a given item, and their full list of allergies. - [view](https://exercism.io/tracks/python/exercises/allergies)
     ```python
     class Allergies(object):
         allergens = ['eggs', 'peanuts', 'shellfish', 'strawberries',
@@ -63,6 +66,7 @@
 ### anagram
 
 === "python"
+    Given a word and a list of possible anagrams, select the correct sublist. - [view](https://exercism.io/tracks/python/exercises/anagram)
     ```python
     from collections import Counter
 
@@ -82,6 +86,7 @@
     ```
 
 === "rust"
+    An anagram is a rearrangement of letters to form a new word. - [view](https://exercism.io/tracks/rust/exercises/anagram)
     ```rust
     use std::collections::HashSet;
     extern crate itertools;
@@ -105,6 +110,7 @@
 ### armstrong-numbers
 
 === "javascript"
+    An [Armstrong number](https://en.wikipedia.org/wiki/Narcissistic_number) is a number that is the sum of its own digits each raised to the power of the number of digits. - [view](https://exercism.io/tracks/javascript/exercises/armstrong-numbers)
     ```javascript
     export function validate(input) {
       return [...input.toString()]
@@ -114,6 +120,7 @@
     ```
 
 === "python"
+    An [Armstrong number](https://en.wikipedia.org/wiki/Narcissistic_number) is a number that is the sum of its own digits each raised to the power of the number of digits. - [view](https://exercism.io/tracks/python/exercises/armstrong-numbers)
     ```python
     def is_armstrong(number):
         digits = str(number)
@@ -123,6 +130,7 @@
     ```
 
 === "rust"
+    An [Armstrong number](https://en.wikipedia.org/wiki/Narcissistic_number) is a number that is the sum of its own digits each raised to the power of the number of digits. - [view](https://exercism.io/tracks/rust/exercises/armstrong-numbers)
     ```rust
     pub fn is_armstrong_number(num: u32) -> bool {
       let digits = num.to_string();
@@ -138,6 +146,7 @@
 ### atbash-cipher
 
 === "rust"
+    Create an implementation of the atbash cipher, an ancient encryption system created in the Middle East. - [view](https://exercism.io/tracks/rust/exercises/atbash-cipher)
     ```rust
     const A: u8 = b'a';
     const Z: u8 = b'z';
@@ -173,6 +182,7 @@
 ### bank-account
 
 === "python"
+    Simulate a bank account supporting opening/closing, withdrawals, and deposits - [view](https://exercism.io/tracks/python/exercises/bank-account)
     ```python
     from threading import Lock
 
@@ -240,6 +250,7 @@
 ### beer-song
 
 === "rust"
+    Recite the lyrics to that beloved classic, that field-trip favorite: 99 Bottles of Beer on the Wall. - [view](https://exercism.io/tracks/rust/exercises/beer-song)
     ```rust
     pub fn verse(n: i32) -> String {
       match n {
@@ -282,6 +293,7 @@
 ### bob
 
 === "javascript"
+    Bob is a lackadaisical teenager. In conversation, his responses are very limited. - [view](https://exercism.io/tracks/javascript/exercises/bob)
     ```javascript
     export const hey = (message) => {
       message = message.trim()
@@ -304,6 +316,7 @@
     ```
 
 === "python"
+    Bob is a lackadaisical teenager. In conversation, his responses are very limited. - [view](https://exercism.io/tracks/python/exercises/bob)
     ```python
     def response(hey_bob):
         hey_bob = hey_bob.strip()
@@ -321,6 +334,7 @@
     ```
 
 === "rust"
+    Bob is a lackadaisical teenager. In conversation, his responses are very limited. - [view](https://exercism.io/tracks/rust/exercises/bob)
     ```rust
     extern crate regex;
     use regex::Regex;
@@ -349,6 +363,7 @@
 ### clock
 
 === "rust"
+    Implement a clock that handles times without dates. - [view](https://exercism.io/tracks/rust/exercises/clock)
     ```rust
     use modulo::Mod;
     use std::fmt;
@@ -384,6 +399,7 @@
 ### collatz-conjecture
 
 === "rust"
+    The Collatz Conjecture or 3x+1 problem can be summarized as follows: - [view](https://exercism.io/tracks/rust/exercises/collatz-conjecture)
     ```rust
     pub fn collatz(n: u64) -> Option<u64> {
       match n {
@@ -405,6 +421,7 @@
 ### darts
 
 === "javascript"
+    Write a function that returns the earned points in a single toss of a Darts game. - [view](https://exercism.io/tracks/javascript/exercises/darts)
     ```javascript
     const targets = [1,  5**2, 10**2],
           points  = [10, 5,    1]
@@ -418,6 +435,7 @@
 ### difference-of-squares
 
 === "python"
+    Find the difference between the square of the sum and the sum of the squares of the first N natural numbers. - [view](https://exercism.io/tracks/python/exercises/difference-of-squares)
     ```python
     def square_of_sum(number):
         return sum(range(number+1)) ** 2
@@ -433,6 +451,7 @@
     ```
 
 === "rust"
+    Find the difference between the square of the sum and the sum of the squares of the first N natural numbers. - [view](https://exercism.io/tracks/rust/exercises/difference-of-squares)
     ```rust
     pub fn square_of_sum(n: u32) -> u32 {
       (1..=n).fold(0, |acc, x| acc + x).pow(2)
@@ -451,6 +470,7 @@
 ### diffie-hellman
 
 === "rust"
+    Diffie-Hellman key exchange. - [view](https://exercism.io/tracks/rust/exercises/diffie-hellman)
     ```rust
     extern crate num;
     extern crate rand;
@@ -478,6 +498,7 @@
 ### dnd-character
 
 === "python"
+    For a game of [Dungeons & Dragons][DND], each player starts by generating a - [view](https://exercism.io/tracks/python/exercises/dnd-character)
     ```python
     from random import randint
 
@@ -504,6 +525,7 @@
 ### error-handling
 
 === "python"
+    Implement various kinds of error handling and resource management. - [view](https://exercism.io/tracks/python/exercises/error-handling)
     ```python
     def handle_error_by_throwing_exception():
         raise Exception('Error message')
@@ -530,6 +552,7 @@
 ### gigasecond
 
 === "javascript"
+    Given a moment, determine the moment that would be after a gigasecond - [view](https://exercism.io/tracks/javascript/exercises/gigasecond)
     ```javascript
     const GIGASECOND = 1e12
 
@@ -540,6 +563,7 @@
     ```
 
 === "python"
+    Calculate the moment when someone has lived for 10^9 seconds. - [view](https://exercism.io/tracks/python/exercises/gigasecond)
     ```python
     from datetime import timedelta
     GIGASECOND = timedelta(seconds=10**9)
@@ -551,6 +575,7 @@
     ```
 
 === "rust"
+    Calculate the moment when someone has lived for 10^9 seconds. - [view](https://exercism.io/tracks/rust/exercises/gigasecond)
     ```rust
     extern crate chrono;
     use chrono::{DateTime, TimeZone, Utc};
@@ -565,6 +590,7 @@
 ### grains
 
 === "python"
+    Calculate the number of grains of wheat on a chessboard given that the number - [view](https://exercism.io/tracks/python/exercises/grains)
     ```python
     def on_square(n):
         if n < 1 or n > 64:
@@ -580,6 +606,7 @@
     ```
 
 === "rust"
+    Calculate the number of grains of wheat on a chessboard given that the number - [view](https://exercism.io/tracks/rust/exercises/grains)
     ```rust
     pub fn square(s: u32) -> u64 {
       match s {
@@ -597,6 +624,7 @@
 ### hamming
 
 === "python"
+    Calculate the Hamming difference between two DNA strands. - [view](https://exercism.io/tracks/python/exercises/hamming)
     ```python
     def distance(strand_a, strand_b):
         if len(strand_a) != len(strand_b):
@@ -608,12 +636,8 @@
 ### hello-world
 
 === "javascript"
+    The classical introductory exercise. Just say "Hello, World!". - [view](https://exercism.io/tracks/javascript/exercises/hello-world)
     ```javascript
-    //
-    // This is only a SKELETON file for the 'Hello World' exercise. It's been provided as a
-    // convenience to get you started writing code faster.
-    //
-
     export const hello = () => {
       return "Hello, World!"
     };
@@ -621,6 +645,7 @@
     ```
 
 === "python"
+    The classical introductory exercise. Just say "Hello, World!". - [view](https://exercism.io/tracks/python/exercises/hello-world)
     ```python
     def hello():
         return 'Hello, World!'
@@ -628,9 +653,8 @@
     ```
 
 === "rust"
+    The classical introductory exercise. Just say "Hello, World!". - [view](https://exercism.io/tracks/rust/exercises/hello-world)
     ```rust
-    // The &'static here means the return type has a static lifetime.
-    // This is a Rust feature that you don't need to worry about now.
     pub fn hello() -> &'static str {
         "Hello, World!"
     }
@@ -640,6 +664,7 @@
 ### high-scores
 
 === "python"
+    Manage a game player's High Score list. - [view](https://exercism.io/tracks/python/exercises/high-scores)
     ```python
     class HighScores(object):
         def __init__(self, scores):
@@ -664,6 +689,7 @@
 ### isbn-verifier
 
 === "python"
+    The [ISBN-10 verification process](https://en.wikipedia.org/wiki/International_Standard_Book_Number) is used to validate book identification - [view](https://exercism.io/tracks/python/exercises/isbn-verifier)
     ```python
     import re
     from operator import mul
@@ -691,6 +717,7 @@
 ### isogram
 
 === "python"
+    Determine if a word or phrase is an isogram. - [view](https://exercism.io/tracks/python/exercises/isogram)
     ```python
     def is_isogram(string):
         letters = set()
@@ -705,6 +732,7 @@
     ```
 
 === "rust"
+    Determine if a word or phrase is an isogram. - [view](https://exercism.io/tracks/rust/exercises/isogram)
     ```rust
     use itertools::sorted;
 
@@ -729,9 +757,33 @@
 
     ```
 
+### kindergarten-garden
+
+=== "python"
+    Given a diagram, determine which plants each child in the kindergarten class is - [view](https://exercism.io/tracks/python/exercises/kindergarten-garden)
+    ```python
+    from numpy import array
+
+    STUDENTS = ["Alice", "Bob", "Charlie", "David", "Eve", "Fred",
+                "Ginny", "Harriet", "Ileana", "Joseph", "Kincaid", "Larry"]
+    PLANTS = {"G": "Grass", "C": "Clover", "R": "Radishes", "V": "Violets"}
+
+
+    class Garden:
+        def __init__(self, diagram, students=STUDENTS):
+            self.students = sorted(students)
+            self.diagram = array([list(row) for row in diagram.split('\n')])
+
+        def plants(self, student):
+            i = self.students.index(student) * 2
+            return [PLANTS[p] for p in self.diagram[:, i:i + 2].flatten()]
+
+    ```
+
 ### largest-series-product
 
 === "python"
+    Given a string of digits, calculate the largest product for a contiguous - [view](https://exercism.io/tracks/python/exercises/largest-series-product)
     ```python
     from functools import reduce
     from operator import mul
@@ -752,6 +804,7 @@
 ### leap
 
 === "javascript"
+    Given a year, report if it is a leap year. - [view](https://exercism.io/tracks/javascript/exercises/leap)
     ```javascript
     export function isLeap(year) {
       return year % 4 === 0
@@ -760,6 +813,7 @@
     ```
 
 === "python"
+    Given a year, report if it is a leap year. - [view](https://exercism.io/tracks/python/exercises/leap)
     ```python
     def is_leap_year(year):
         return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
@@ -767,6 +821,7 @@
     ```
 
 === "rust"
+    Given a year, report if it is a leap year. - [view](https://exercism.io/tracks/rust/exercises/leap)
     ```rust
     pub fn is_leap_year(year: i32) -> bool {
       return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
@@ -777,6 +832,7 @@
 ### linked-list
 
 === "javascript"
+    Implement a doubly linked list. - [view](https://exercism.io/tracks/javascript/exercises/linked-list)
     ```javascript
     class Node {
       constructor({ val = null, prev = null, next = null }) {
@@ -841,6 +897,7 @@
 ### matching-brackets
 
 === "rust"
+    Given a string containing brackets `[]`, braces `{}`, parentheses `()`, - [view](https://exercism.io/tracks/rust/exercises/matching-brackets)
     ```rust
     fn close_bracket(c: char) -> char {
         match c {
@@ -872,6 +929,7 @@
 ### matrix
 
 === "javascript"
+    Given a string representing a matrix of numbers, return the rows and columns of - [view](https://exercism.io/tracks/javascript/exercises/matrix)
     ```javascript
     export class Matrix {
       constructor(matrix) {
@@ -888,6 +946,7 @@
     ```
 
 === "python"
+    Given a string representing a matrix of numbers, return the rows and columns of - [view](https://exercism.io/tracks/python/exercises/matrix)
     ```python
     class Matrix():
         def __init__(self, matrix_string):
@@ -902,9 +961,42 @@
 
     ```
 
+### meetup
+
+=== "python"
+    Calculate the date of meetups. - [view](https://exercism.io/tracks/python/exercises/meetup)
+    ```python
+    from calendar import monthrange, day_name
+    from datetime import date
+
+
+    class MeetupDayException(Exception):
+        pass
+
+
+    def meetup(year, month, week, day_of_week):
+        weekday = dict(zip(day_name, range(7)))[day_of_week]
+        firstday, max_days = monthrange(year, month)
+        days = range((weekday - firstday) % 7 + 1, max_days + 1, 7)
+
+        if week == "teenth":
+            day = next(i for i in days if i >= 13 and i <= 19)
+        elif week == 'last':
+            day = days[-1]
+        else:   # week in ["1st", "2nd", "3rd", "4th", "5th"]:
+            try:
+                day = days[int(week[0]) - 1]
+            except:
+                raise MeetupDayException("No {0} {1}!".format(week, day_of_week))
+
+        return date(year, month, day)
+
+    ```
+
 ### nth-prime
 
 === "rust"
+    Given a number n, determine what the nth prime is. - [view](https://exercism.io/tracks/rust/exercises/nth-prime)
     ```rust
     pub fn nth(n: usize) -> u32 {
       fn is_prime(x: u32, factors: &Vec<u32>) -> bool {
@@ -927,6 +1019,7 @@
 ### pangram
 
 === "javascript"
+    Determine if a sentence is a pangram. A pangram (Greek: παν γράμμα, pan gramma, - [view](https://exercism.io/tracks/javascript/exercises/pangram)
     ```javascript
     const ALPHABET = 'abcdefghijklmnopqrstuvwxyz'.split('')
 
@@ -938,6 +1031,7 @@
     ```
 
 === "python"
+    Determine if a sentence is a pangram. A pangram (Greek: παν γράμμα, pan gramma, - [view](https://exercism.io/tracks/python/exercises/pangram)
     ```python
     def is_pangram(sentence):
         diff = ord('z') - ord('a')
@@ -952,6 +1046,7 @@
 ### pascals-triangle
 
 === "javascript"
+    Compute Pascal's triangle up to a given number of rows. - [view](https://exercism.io/tracks/javascript/exercises/pascals-triangle)
     ```javascript
     export class Triangle {
       constructor(n) {
@@ -977,6 +1072,7 @@
 ### perfect-numbers
 
 === "python"
+    Determine if a number is perfect, abundant, or deficient based on - [view](https://exercism.io/tracks/python/exercises/perfect-numbers)
     ```python
     def factors(number):
         if number == 1:
@@ -1002,6 +1098,7 @@
 ### phone-number
 
 === "python"
+    Clean up user-entered phone numbers so that they can be sent SMS messages. - [view](https://exercism.io/tracks/python/exercises/phone-number)
     ```python
     import re
 
@@ -1032,6 +1129,7 @@
 ### prime-factors
 
 === "python"
+    Compute the prime factors of a given natural number. - [view](https://exercism.io/tracks/python/exercises/prime-factors)
     ```python
     def prime_factors(number):
         factors, d = [], 2
@@ -1049,6 +1147,7 @@
     ```
 
 === "rust"
+    Compute the prime factors of a given natural number. - [view](https://exercism.io/tracks/rust/exercises/prime-factors)
     ```rust
     pub fn factors(mut n: u64) -> Vec<u64> {
       let mut factors = Vec::new();
@@ -1065,6 +1164,7 @@
 ### protein-translation
 
 === "javascript"
+    Translate RNA sequences into proteins. - [view](https://exercism.io/tracks/javascript/exercises/protein-translation)
     ```javascript
     const codons = (() => {
       let AUG, UUU, UUC, UUA, UUG, UCU, UCC, UCA, UCG, UAU, UAC, UGU, UGC, UGG, UAA, UAG, UGA
@@ -1092,6 +1192,7 @@
     ```
 
 === "python"
+    Translate RNA sequences into proteins. - [view](https://exercism.io/tracks/python/exercises/protein-translation)
     ```python
     from itertools import takewhile
 
@@ -1117,6 +1218,7 @@
 ### proverb
 
 === "rust"
+    For want of a horseshoe nail, a kingdom was lost, or so the saying goes. - [view](https://exercism.io/tracks/rust/exercises/proverb)
     ```rust
     pub fn build_proverb(list: Vec<&str>) -> String {
       match list.as_slice() {
@@ -1139,6 +1241,7 @@
 ### pythagorean-triplet
 
 === "python"
+    A Pythagorean triplet is a set of three natural numbers, {a, b, c}, for - [view](https://exercism.io/tracks/python/exercises/pythagorean-triplet)
     ```python
     from math import sqrt
 
@@ -1161,6 +1264,7 @@
     ```
 
 === "rust"
+    A Pythagorean triplet is a set of three natural numbers, {a, b, c}, for - [view](https://exercism.io/tracks/rust/exercises/pythagorean-triplet)
     ```rust
     use rayon::prelude::*;
     use std::collections::HashSet;
@@ -1189,6 +1293,7 @@
 ### raindrops
 
 === "python"
+    Convert a number to a string, the contents of which depend on the number's factors. - [view](https://exercism.io/tracks/python/exercises/raindrops)
     ```python
     PL_NG = {3: 'Pling', 5: 'Plang', 7: 'Plong'}
 
@@ -1200,6 +1305,7 @@
     ```
 
 === "rust"
+    Convert a number to a string, the contents of which depend on the number's factors. - [view](https://exercism.io/tracks/rust/exercises/raindrops)
     ```rust
     const PLING: &str = "Pling";
     const PLANG: &str = "Plang";
@@ -1231,6 +1337,7 @@
 ### rational-numbers
 
 === "python"
+    A rational number is defined as the quotient of two integers `a` and `b`, called the numerator and denominator, respectively, where `b != 0`. - [view](https://exercism.io/tracks/python/exercises/rational-numbers)
     ```python
     from __future__ import division
 
@@ -1282,6 +1389,7 @@
 ### resistor-color
 
 === "javascript"
+    Resistors have color coded bands, where each color maps to a number. The first 2 bands of a resistor have a simple encoding scheme: each color maps to a single number. - [view](https://exercism.io/tracks/javascript/exercises/resistor-color)
     ```javascript
     export const COLORS = ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"]
 
@@ -1293,6 +1401,7 @@
 ### resistor-color-duo
 
 === "javascript"
+    If you want to build something using a Raspberry Pi, you'll probably use _resistors_. For this exercise, you need to know two things about them: - [view](https://exercism.io/tracks/javascript/exercises/resistor-color-duo)
     ```javascript
     const COLORS = ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"]
 
@@ -1304,6 +1413,7 @@
 ### reverse-string
 
 === "python"
+    Reverse a string - [view](https://exercism.io/tracks/python/exercises/reverse-string)
     ```python
     def reverse(text):
         return text[::-1]
@@ -1311,6 +1421,7 @@
     ```
 
 === "rust"
+    Reverse a string - [view](https://exercism.io/tracks/rust/exercises/reverse-string)
     ```rust
     extern crate unicode_segmentation;
     use unicode_segmentation::UnicodeSegmentation;
@@ -1324,6 +1435,7 @@
 ### rna-transcription
 
 === "javascript"
+    Given a DNA strand, return its RNA complement (per RNA transcription). - [view](https://exercism.io/tracks/javascript/exercises/rna-transcription)
     ```javascript
     const COMPLEMENT = { G: 'C', C: 'G', T: 'A', A: 'U' }
 
@@ -1333,6 +1445,7 @@
     ```
 
 === "python"
+    Given a DNA strand, return its RNA complement (per RNA transcription). - [view](https://exercism.io/tracks/python/exercises/rna-transcription)
     ```python
     rna = str.maketrans("GCTA", "CGAU")
 
@@ -1345,6 +1458,7 @@
 ### robot-name
 
 === "python"
+    Manage robot factory settings. - [view](https://exercism.io/tracks/python/exercises/robot-name)
     ```python
     import random
 
@@ -1385,6 +1499,7 @@
 ### roman-numerals
 
 === "javascript"
+    Write a function to convert from normal numbers to Roman Numerals. - [view](https://exercism.io/tracks/javascript/exercises/roman-numerals)
     ```javascript
     const NUMERALS = { 1: 'I', 5: 'V', 10: 'X', 50: 'L', 100: 'C', 500: 'D', 1000: 'M' }
 
@@ -1414,6 +1529,7 @@
 ### run-length-encoding
 
 === "javascript"
+    Implement run-length encoding and decoding. - [view](https://exercism.io/tracks/javascript/exercises/run-length-encoding)
     ```javascript
     export function encode(txt) {
       return txt.replace(/(.)\1+/g,
@@ -1429,6 +1545,7 @@
 ### saddle-points
 
 === "python"
+    Detect saddle points in a matrix. - [view](https://exercism.io/tracks/python/exercises/saddle-points)
     ```python
     def saddle_points(matrix):
         if not matrix:
@@ -1446,6 +1563,7 @@
     ```
 
 === "rust"
+    Detect saddle points in a matrix. - [view](https://exercism.io/tracks/rust/exercises/saddle-points)
     ```rust
     pub fn find_saddle_points(input: &[Vec<u64>]) -> Vec<(usize, usize)> {
       let len: usize = if input.len() > 0 { input[0].len() } else { 0 };
@@ -1470,22 +1588,72 @@
 
     ```
 
+### say
+
+=== "python"
+    Given a number from 0 to 999,999,999,999, spell out that number in English. - [view](https://exercism.io/tracks/python/exercises/say)
+    ```python
+    SAY = {
+        0: 'zero', 1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten',
+        11: 'eleven', 12: 'twelve', 13: 'thirteen', 14: 'fourteen', 15: 'fifteen', 16: 'sixteen', 17: 'seventeen', 18: 'eighteen', 19: 'nineteen',
+        20: 'twenty', 30: 'thirty', 40: 'forty', 50: 'fifty', 60: 'sixty', 70: 'seventy', 80: 'eighty', 90: 'ninety'
+     }
+
+
+    def _say_postfix(number, divisor, postfix):
+        quo, rem = divmod(number, divisor)
+        return f"{_say(quo)} {postfix}" + (f" {_say(rem)}" if rem else '')
+
+
+    def _say(number):
+        if number < 20:
+            return SAY[number]
+        elif number < 100:
+            ten, rem = divmod(number, 10)
+            return SAY[ten * 10] + (f"-{SAY[rem]}" if rem else '')
+        elif number < 1e3:
+            return _say_postfix(number, 100, "hundred")
+
+        for divisor, postfix in [(1e3, "thousand"), (1e6, "million"), (1e9, "billion")]:
+            if number < 1e3 * divisor:
+                return _say_postfix(number, divisor, postfix)
+
+
+    def say(number):
+        if number < 0 or number >= 1e12:
+            raise ValueError("Out of range")
+        else:
+            return _say(number)
+
+    ```
+
 ### scrabble-score
 
 === "python"
+    Given a word, compute the scrabble score for that word. - [view](https://exercism.io/tracks/python/exercises/scrabble-score)
     ```python
-    SCORE = {c: v for k, v in {'AEIOULNRST': 1, 'DG': 2, 'BCMP': 3,
-                               'FHVWY': 4, 'K': 5, 'JX': 8, 'QZ': 10}.items() for c in k}
+    from enum import IntEnum
+
+
+    class Score(IntEnum):
+        A = E = I = O = U = L = N = R = S = T = 1
+        D = G = 2
+        B = C = M = P = 3
+        F = H = V = W = Y = 4
+        K = 5
+        J = X = 8
+        Q = Z = 10
 
 
     def score(word):
-        return sum(SCORE[c] for c in word.upper())
+        return sum(Score[c] for c in word.upper())
 
     ```
 
 ### series
 
 === "python"
+    Given a string of digits, output all the contiguous substrings of length `n` in - [view](https://exercism.io/tracks/python/exercises/series)
     ```python
     def slices(series, length):
         if length <= 0 or len(series) < length:
@@ -1495,6 +1663,7 @@
     ```
 
 === "rust"
+    Given a string of digits, output all the contiguous substrings of length `n` in - [view](https://exercism.io/tracks/rust/exercises/series)
     ```rust
     pub fn series(digits: &str, len: usize) -> Vec<String> {
       (0..digits.len().checked_sub(len - 1).unwrap_or(0))
@@ -1507,6 +1676,7 @@
 ### sgf-parsing
 
 === "python"
+    Parsing a Smart Game Format string. - [view](https://exercism.io/tracks/python/exercises/sgf-parsing)
     ```python
     import re
 
@@ -1628,9 +1798,30 @@
 
     ```
 
+### sieve
+
+=== "python"
+    Use the Sieve of Eratosthenes to find all the primes from 2 up to a given - [view](https://exercism.io/tracks/python/exercises/sieve)
+    ```python
+    def primes(limit):
+        numbers = list(range(2, limit + 1))
+        prime_gen = (n for n in numbers if n)
+
+        while True:
+            prime = next(prime_gen, None)
+            if not prime:
+                break
+            for i in range(prime * 2, len(numbers) + 2, prime):
+                numbers[i - 2] = 0    # mark multiples of prime
+
+        return [n for n in numbers if n]    # primes
+
+    ```
+
 ### simple-cipher
 
 === "python"
+    Implement a simple shift cipher like Caesar and a more secure substitution cipher. - [view](https://exercism.io/tracks/python/exercises/simple-cipher)
     ```python
     from itertools import cycle
     from string import ascii_lowercase
@@ -1665,6 +1856,7 @@
 ### space-age
 
 === "javascript"
+    Given an age in seconds, calculate how old someone would be on: - [view](https://exercism.io/tracks/javascript/exercises/space-age)
     ```javascript
     const EARTH_YEAR_IN_SECONDS = 31557600
     const YEAR_IN_EARTH_YEARS = {
@@ -1687,6 +1879,7 @@
     ```
 
 === "python"
+    Given an age in seconds, calculate how old someone would be on: - [view](https://exercism.io/tracks/python/exercises/space-age)
     ```python
     class SpaceAge(object):
         PLANET_ORBITS = [(p, o * 31557600) for p, o in (
@@ -1711,6 +1904,7 @@
 ### sum-of-multiples
 
 === "python"
+    Given a number, find the sum of all the unique multiples of particular numbers up to - [view](https://exercism.io/tracks/python/exercises/sum-of-multiples)
     ```python
     def sum_of_multiples(limit, multiples):
         return sum({i for m in multiples if m > 0
@@ -1719,6 +1913,7 @@
     ```
 
 === "rust"
+    Given a number, find the sum of all the unique multiples of particular numbers up to - [view](https://exercism.io/tracks/rust/exercises/sum-of-multiples)
     ```rust
     pub fn sum_of_multiples(limit: u32, factors: &[u32]) -> u32 {
       (1..limit)
@@ -1731,6 +1926,7 @@
 ### twelve-days
 
 === "python"
+    Output the lyrics to 'The Twelve Days of Christmas'. - [view](https://exercism.io/tracks/python/exercises/twelve-days)
     ```python
     thing = ["a Partridge", "two Turtle Doves", "three French Hens", "four Calling Birds",
              "five Gold Rings", "six Geese-a-Laying", "seven Swans-a-Swimming", "eight Maids-a-Milking",
@@ -1754,6 +1950,7 @@
 ### two-fer
 
 === "javascript"
+    `Two-fer` or `2-fer` is short for two for one. One for you and one for me. - [view](https://exercism.io/tracks/javascript/exercises/two-fer)
     ```javascript
     export function twoFer(name = 'you') {
       return `One for ${name}, one for me.`
@@ -1761,6 +1958,7 @@
     ```
 
 === "python"
+    `Two-fer` or `2-fer` is short for two for one. One for you and one for me. - [view](https://exercism.io/tracks/python/exercises/two-fer)
     ```python
     def two_fer(name="you"):
         return f"One for {name}, one for me."
@@ -1770,6 +1968,7 @@
 ### word-count
 
 === "python"
+    Given a phrase, count the occurrences of each _word_ in that phrase. - [view](https://exercism.io/tracks/python/exercises/word-count)
     ```python
     from collections import Counter
     from re import sub
@@ -1785,6 +1984,7 @@
 ### yacht
 
 === "python"
+    Score a single throw of dice in *Yacht* - [view](https://exercism.io/tracks/python/exercises/yacht)
     ```python
     # Score categories
     # Change the values as you see fit
