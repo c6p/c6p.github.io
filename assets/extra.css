@@ -1,0 +1,19 @@
+.hidden { display: none; }
+img.thumb {
+  max-width: min(400px, 100%);
+  max-height: 200px;
+}
+.md-typeset__table { padding: 0; }
+
+table#resource {
+  table-layout: fixed;
+  display: table;
+}
+table#resource th:nth-child(1),
+table#resource th:nth-child(2) { width: 10%; }
+table#resource th:nth-child(3) { width: 30%; }
+table#resource th:nth-child(4) { width: 50%; }
+@media only screen and (max-width: 500px) {
+	table#resource tr > :nth-child(1),
+	table#resource tr > :nth-child(2) { display: none; }
+}
