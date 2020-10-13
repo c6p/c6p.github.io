@@ -2,7 +2,7 @@
 from os import walk, path
 from textwrap import indent
 
-ROOT = path.join('assets', 'exercism')
+ROOT = path.join('helpers', 'exercism')
 
 rules = {
   'javascript': (lambda x: x+'.js', "## Setup"),
@@ -31,13 +31,16 @@ def readme(exercise,lang):
 
 md = '# Exercism\n[My exercism profile: c6p](https://exercism.io/profiles/c6p)\n\n'
 for exercise, langs in sorted(exercises.items()):
-  md += '### {0}\n\n'.format(exercise)  # title
+  md += f'### {exercise}\n\n'  # title
+  md += f'{{{{< tabs "{exercise}" >}}}}\n'
   files = [(path.join(ROOT, l, exercise, rules[l][0](exercise)), l) for l in langs]
   for code, lang in files:
-    md += '=== "{0}"\n'.format(lang)
+    md += f'{{{{< tab "{lang}" >}}}}\n'
     #title, desc = readme(exercise,lang)
     #md += indent(f'??? note "{title}"\n' + indent(desc, '    '), '    ') + '\n\n'
-    md += indent(readme(exercise,lang), '    ')
-    md += indent('```{0}\n{1}\n```\n\n'.format(lang, readall(code)), '    ')
+    md += readme(exercise,lang)
+    md += f'```{lang}\n{readall(code)}\n```\n'
+    md += '{{< /tab >}}\n'
+  md += '{{< /tabs >}}\n\n'
 
 print(md)

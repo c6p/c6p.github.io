@@ -1,0 +1,39 @@
+{{ with .Get "url" }}
+{{ $data := after 1 (getCSV "," .) }}
+
+<select id="resource_topic" onchange="filter_resources()">
+  <option value=""> Select Topic...</option>
+  {{ range sort (uniq (apply $data "index" "." 0)) }}
+  <option value="{{ . }}1">{{ . }}</option>
+  {{ end }}
+</select>
+<select id="resource_type" onchange="filter_resources()">
+  <option value=""> Select Type...</option>
+  {{ range sort (uniq (apply $data "index" "." 2)) }}
+  <option value="{{ . }}2">{{ . }}</option>
+  {{ end }}
+</select>
+
+<table id="resource">
+  <tr class="header">
+    <th>Topic</th>
+    <th>Type</th>
+    <th>Resource</th>
+    <th>Detail</th>
+  </tr>
+  {{ range $i, $r := $data }}
+  <tr class="{{ index $r 0 }}1 {{ index $r 2 }}2">
+    <td>{{ index $r 0 }}</td>
+    <td>{{ index $r 2 }}</td>
+    <td><a href="{{ index $r 4 }}">{{ index $r 3 }}</a></td>
+    <td>
+      {{ index $r 5 | markdownify }}
+      {{ with index $r 6}}
+      <!-- TODO image resize -->
+      <br><img class="thumb" src="{{ . }}">
+      {{ end }}
+    </td>
+  </tr>
+  {{ end }}
+</table>
+{{ end }}

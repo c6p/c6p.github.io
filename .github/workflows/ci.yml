@@ -8,10 +8,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
         with:
-          python-version: 3.x
-      - run: pip install mkdocs-material==5.5.12
-      - run: pip install mkdocs-exclude
-      - run: pip install mkdocs-roamlinks-plugin
-      - run: mkdocs gh-deploy --force
+          submodules: recursive  # Fetch the Docsy theme
+          fetch-depth: 0         # Fetch all history for .GitInfo and .Lastmod
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.75.1'
+          extended: true
+      - run: hugo --minify
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}

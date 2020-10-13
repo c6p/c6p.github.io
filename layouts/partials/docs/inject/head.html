@@ -1,0 +1,6 @@
+{{ $style := resources.Get "main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+
+{{ $main := resources.Get "main.js" }}
+{{ $script := slice $main | resources.Concat "vendor.js" | minify | fingerprint }}
+<script defer src="{{ $script.Permalink }}"></script>
