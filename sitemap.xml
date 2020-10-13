@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
-     <loc>https://c6p.github.io/</loc>
-     <lastmod>2020-10-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://c6p.github.io/learning/exercism/</loc>
-     <lastmod>2020-10-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://c6p.github.io/learning/resources/</loc>
-     <lastmod>2020-10-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-</urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>http://c6p.gihub.ip/docs/learning/exercism/</loc></url><url><loc>http://c6p.gihub.ip/docs/learning/resources/</loc></url><url><loc>http://c6p.gihub.ip/</loc></url><url><loc>http://c6p.gihub.ip/categories/</loc></url><url><loc>http://c6p.gihub.ip/docs/</loc></url><url><loc>http://c6p.gihub.ip/tags/</loc></url></urlset>
