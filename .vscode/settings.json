@@ -1,3 +1,4 @@
 {
-  "npm.exclude": "**/@(assets|vendor|node_modules|bower_components|dist|static)/**"
+  "npm.exclude": "**/@(assets|vendor|node_modules|bower_components|dist|static)/**",
+  "python.dataScience.jupyterServerURI": "local"
 }
