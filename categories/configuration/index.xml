@@ -14,4 +14,4 @@ Windows
 scoop bucket add nirsoft
 scoop install scoop-completion which autohotkey pyenv sysinternals shellexview shellmenuview rapidee lockhunter spacesniffer everything winmerge dupeguru winaero-tweaker carnac
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Then to update all &lt;code>scoop update *&lt;/code>. I am generally keeping self updating software like Firefox out of scoop, everything else is managed by scoop.&lt;/p>
-&lt;p>You can install Everything from an elevated CLI, otherwise it is may raise a UAC prompt at boot.&lt;/p></description></item></channel></rss>
+&lt;p>You can install Everything from an elevated CLI, otherwise it may raise a UAC prompt at boot.&lt;/p></description></item></channel></rss>
