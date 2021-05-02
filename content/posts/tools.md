@@ -17,9 +17,8 @@ Inspired by [Hanselman Ultimate Tool List](https://www.hanselman.com/tools), che
 ```
   Then to update all `scoop update *`. I am generally keeping self updating software like Firefox out of scoop, everything else is managed by scoop.
 
-  You can install Everything from an elevated CLI, otherwise it is may raise a UAC prompt at boot. 
+  You can install Everything from an elevated CLI, otherwise it may raise a UAC prompt at boot. 
 <!--more-->
-- [which](http://gnuwin32.sourceforge.net/packages/which.htm) — **Which for Windows.** Shows full path of commands. I am not used to the PowerShell way of doing things, so I reach for a known Unix tool to quickly find out path of an executable.  
 - [AutoHotKey](https://www.autohotkey.com/) — **Automation scripting language.** Easy to learn and lightweight. One example is better than a thousand words, so here is an `ahk` file to *scan with MalwareBytes Free*.
 ```posh
 Run, "C:\Program Files\Malwarebytes\Anti-Malware\mbam.exe"
@@ -31,9 +30,9 @@ ControlClick, x450 y580, Malwarebytes Free,,,, NA
 - [ShellExView](https://www.nirsoft.net/utils/shexview.html) and [ShellMenuView](https://www.nirsoft.net/utils/shell_menu_view.html) — **Context menu editor.** ShellExView is for shell extensions (i.e. 7-Zip submenu) and ShellMenuView is for static items in right click menus.
 - [RapidEE](https://www.rapidee.com/en/about) — **Environment editor.** Even though Windows 10 eased the environmental variables' management, RapidEE still has a place with its automatic invalid path check. 
 - [LockHunter](https://lockhunter.com/) — **File unlocker.** In case of those nasty situations where some file or disk is locked, so you can't delete/move or safely unmount. Just use from right-click menu or drop on it.  
-- Process Hacker — system monitor
+- [Process Hacker](https://processhacker.sourceforge.io/) — **System Monitor.** Can replace Task Manager. More powerful. It can filter task list and doubles as a lock-hunter. 
 - [SpaceSniffer](http://www.uderzo.it/main_products/space_sniffer/) or [WizTree](https://wiztreefree.com/): **Disk space analyzer.** SpaceSniffer's UI is cleaner, but WizTree is faster to analyze disk. I used to be a user of [WinDirStat](https://windirstat.net/) whose UI is identical to WizTree, however it is slower than both options.
-- [Everything](https://www.voidtools.com/) — **Instant Search.** Alternative to Unix locate. Although this tool only locates files by name, it is instant and lightweight, while Windows Search is both resource intensive and slow. Whenever I am on a Windows desktop without Everything I just feel lost.
+- [Everything](https://www.voidtools.com/) — **Instant Search.** Alternative to Unix locate. Although this tool only locates files by name, it is instant and lightweight, while Windows Search is both resource intensive and slow. Whenever, I am on a Windows desktop without Everything I just feel lost.
 - [WinMerge](https://winmerge.org/) — **Directory/file diff-merge.** I am using it for recursive comparison and merge of directories. Files are, most of the time in version control, otherwise launching a text editor is simpler.
 - [dupeGuru](https://dupeguru.voltaicideas.net/): **Duplicate finder.** Simple and quick. TODO: Make use of music and picture specific features advertised.
 - [Winaero Tweaker](https://winaero.com/winaero-tweaker/) — **System customizer.** Widely known. Contains many tweaks for appearance and behavior of your Windows.
@@ -46,7 +45,7 @@ ControlClick, x450 y580, Malwarebytes Free,,,, NA
 
 ## Cross-Platform
 - [ripgrep](https://github.com/BurntSushi/ripgrep) — **Regex pattern searcher.** A cross-platform alternative to Unix tool grep, to recursively search files for regex patterns. It is faster than alternatives ag, ack and grep.
-- [scrcpy](https://github.com/Genymobile/scrcpy) — **PC Android display.** It is pure magic. Connect, then display and control your android device from the comfort of your PC. `scrcpy -S` to turn off android display on launch.
+- [scrcpy](https://github.com/Genymobile/scrcpy) — **PC Android display.** It is pure magic. Connect, than display and control your android device from the comfort of your PC. `scrcpy -S` to turn off android display on launch.
 - [adb](https://developer.android.com/studio/command-line/adb) — **Android controller.** Backup your android, uninstall apps and many more.
 - [SMPlayer](https://www.smplayer.info/) — **Video player.** Compared to [VLC](https://www.videolan.org/), [mplayer](http://www.mplayerhq.hu/design7/dload.html) was always the better player though not that popular, and [mpv](https://mpv.io/) fork is even better. Without doubt the best GUI for mpv is SMPlayer. It has OpenSubtitles.org search feature, and mpv will just play anything thrown to it more performant then any other player.
 ```posh
