@@ -1,3 +1,3 @@
 # Resources
 
-{{< resource_table url="data/resources.csv" >}}
+{{< resource_table "resources.csv" >}}

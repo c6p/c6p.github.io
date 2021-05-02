@@ -5,7 +5,7 @@
       "label": "update exercism.md",
       "type": "shell",
       "command": "${config:python.pythonPath}",
-      "args": ["helpers\\exercism_markdown.py", ">", "content\\docs\\learning\\exercism.md"]
+      "args": ["helpers\\exercism_markdown.py", ">", "docs\\learning\\exercism.md"]
     },
     {
       "label": "hugo server",

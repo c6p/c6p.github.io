@@ -1,5 +1,5 @@
-{{ with .Get "url" }}
-{{ $data := after 1 (getCSV "," .) }}
+{{ with .Get 0 }}
+{{ $data := after 1 (getCSV "," (print "content/" $.Page.File.Dir .)) }}
 
 <select id="resource_topic" onchange="filter_resources()">
   <option value=""> Select Topic...</option>

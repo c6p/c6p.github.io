@@ -1,0 +1,4 @@
+{"rule":"EN_A_VS_AN","sentence":"^\\QOne example is better than a thousand words, so here is an \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q file to\nRapidEE : environment editor\nEverything : search\nrestic\ncrestic\nWinAero Tweaker : tweaking\nwhich\nripgrep : grep\\E$"}
+{"rule":"EN_A_VS_AN","sentence":"^\\QOne example is better than a thousand words, so here is an \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q file to scan with MalwareBytes Free.\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qwhich : Which for Windows.\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qscoop-completion — For CLI completion.\\E$"}
