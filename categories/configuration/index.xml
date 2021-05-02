@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>configuration on c6p - log</title><link>https://c6p.github.io/categories/configuration/</link><description>Recent content in configuration on c6p - log</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 02 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://c6p.github.io/categories/configuration/index.xml" rel="self" type="application/rss+xml"/><item><title>Developer and Power User Tools List</title><link>https://c6p.github.io/posts/tools/</link><pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate><guid>https://c6p.github.io/posts/tools/</guid><description>&lt;p>Inspired by &lt;a href="https://www.hanselman.com/tools">Hanselman Ultimate Tool List&lt;/a>, check out for even more awesome tools.&lt;/p>
+&lt;h2 id="windows">
+Windows
+&lt;a class="anchor" href="#windows">#&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://scoop-docs.now.sh/">scoop&lt;/a> — &lt;strong>Package manager &amp;amp; installer.&lt;/strong> &lt;a href="https://github.com/microsoft/winget-cli">WinGet&lt;/a> is not ready for prime-time and &lt;a href="https://chocolatey.org/">Chocolatey&lt;/a> while has a larger database, it is too slow and harder to automate. &lt;code>scoop install&lt;/code> a package to install an application. &lt;code>update&lt;/code>s and &lt;code>uninstall&lt;/code>s are straightforward too. It has even a Unix which alternative to find out path of an executable &lt;code>scoop which&lt;/code>.
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/Moeologist/scoop-completion">scoop-completion&lt;/a> — For CLI completion.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-posh" data-lang="posh"> scoop bucket add extras
+scoop bucket add nirsoft
+scoop install scoop-completion which autohotkey pyenv sysinternals shellexview shellmenuview rapidee lockhunter spacesniffer everything winmerge dupeguru winaero-tweaker carnac
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Then to update all &lt;code>scoop update *&lt;/code>. I am generally keeping self updating software like Firefox out of scoop, everything else is managed by scoop.&lt;/p>
+&lt;p>You can install Everything from an elevated CLI, otherwise it is may raise a UAC prompt at boot.&lt;/p></description></item></channel></rss>
