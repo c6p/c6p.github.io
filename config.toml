@@ -5,3 +5,14 @@ theme = "book"
 
 [params]
 BookTheme = "dark"
+
+[markup]
+  [markup.highlight]
+      style = "monokai"
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      footnote = true
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.parser]
+      attribute = true

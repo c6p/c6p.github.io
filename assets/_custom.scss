@@ -5,6 +5,7 @@
   top: 0.15rem;
   margin: 0 .3em;
   position: relative;
+  vertical-align: sub;
 }
 .hidden { display: none; }
 img.thumb {
@@ -19,3 +20,63 @@ table#resource th:nth-child(4) { width: 50%; }
 	table#resource tr > :nth-child(1),
 	table#resource tr > :nth-child(2) { display: none; }
 }
+
+/* post-meta */
+div.post-meta {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  filter: grayscale(100%);
+
+  & * { margin: .5em; }
+}
+h5.date {
+  display: inline-block;
+  margin: 0;
+}
+div.tags a,
+div.categories a {
+  display: inline-block;
+  font-weight: 700;
+  font-size: .8em;
+  padding: 0;
+  margin: 0 0.1em;
+}
+div.tags a::before { content:"#"; }
+div.categories a::before { content:"@"; }
+
+.book-post {
+  position: absolute;
+  & > * {
+    margin-top: 0em !important;
+    margin-bottom: .5em !important;
+  }
+  & div.post-meta {
+    margin: 0 !important;
+    & * { 
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+#posts {
+  position: relative;
+  /*display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-rows: masonry;*/
+
+  & div.post-meta { font-size: .8em; }
+  & a.read-more { filter: grayscale(100%); }
+  & .book-post { border-top: 1px solid var(--body-font-color); }
+}
+
+.book-page { padding: 2rem 0; }
+.markdown { padding: 1rem; }
+div.highlight { margin: 0 -1rem; }
+figure.inline {
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+}
+a.book-btn { margin: .2em .1em; }

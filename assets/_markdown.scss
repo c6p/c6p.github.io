@@ -8,13 +8,15 @@
     margin-top: 0;
   }
 
+  li { margin-bottom: .5rem; }
+
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-weight: normal;
+    font-weight: 700;
     line-height: 1;
     margin-top: 1.5em;
     margin-bottom: $padding-16;
@@ -36,12 +38,6 @@
     }
   }
 
-  h4,
-  h5,
-  h6 {
-    font-weight: bolder;
-  }
-
   h5 {
     font-size: 0.875em;
   }
@@ -53,9 +49,10 @@
   b,
   optgroup,
   strong {
-    color: #f9f9f9;
-    text-shadow: 0 0 5px #000;
+    color: #{desaturate(darken($em-font-color, 10), 30)};;
   }
+
+  em { color: var(--em-font-color); }
 
   a {
     text-decoration: none;
@@ -78,14 +75,14 @@
     font-size: 0.875em;
     
     &:not([class]) {
-      color: rgb(255, 180, 84);
-      background: #272822;
+      color: #{saturate($em-font-color, 20)};
+      background: lighten(#272822, 5);
     }
   }
 
   pre {
     padding: $padding-16;
-    background: #272822;
+    background: rgba(240, 246, 252, 0.15);
     border-radius: $border-radius;
     overflow-x: auto;
 
