@@ -1,4 +1,4 @@
-MathJax = {
+window.MathJax = {
   tex: {
     inlineMath: [['$', '$'], ['\\(', '\\)']],
     displayMath: [['$$','$$'], ['\\[', '\\]']],
@@ -11,7 +11,7 @@ MathJax = {
   }
 };
 
-window.onload = (event) => {
-  document.querySelectorAll("mjx-container").forEach(function(x){
-    x.parentElement.classList += 'has-jax'})
-};
+//window.onload = (event) => {
+//  document.querySelectorAll("mjx-container").forEach(function(x){
+//    x.parentElement.classList += 'has-jax'})
+//};
