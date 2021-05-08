@@ -1,3 +1,4 @@
+<base rel="noopener noreferrer">
 {{ $main := resources.Get "main.js" }}
 {{ $script := slice $main | resources.Concat "vendor.js" | minify | fingerprint }}
 <script defer src="{{ $script.Permalink }}"></script>
@@ -15,10 +16,10 @@
     }
   };
 
-  window.addEventListener('load', (event) => {
-      document.querySelectorAll("mjx-container").forEach(function(x){
-        x.parentElement.classList += 'has-jax'})
-    });
+  window.onload = (event) => {
+    document.querySelectorAll("mjx-container").forEach(function(x){
+      x.parentElement.classList += 'has-jax'})
+  };
 </script>
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
