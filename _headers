@@ -2,7 +2,7 @@
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   X-Content-Type-Options: nosniff
   X-XSS-Protection: 1; mode=block
-  Content-Security-Policy: default-src 'self'; manifest-src 'self'; connect-src 'self'; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:; script-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net; style-src 'unsafe-inline' 'self'; object-src 'none'
+  Content-Security-Policy: default-src 'none'; manifest-src 'self'; connect-src 'self'; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:; script-src 'self' 'strict-dynamic' 'sha256-ncNI9OXOS5Ek4tzVYiOMmN/KKCPZ6V0Cpv2P/zHntiA='; style-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net; object-src 'none'
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin
   Feature-Policy: geolocation 'self'
