@@ -10,8 +10,3 @@ window.MathJax = {
     renderActions: { addMenu: [] }
   }
 };
-
-//window.onload = (event) => {
-//  document.querySelectorAll("mjx-container").forEach(function(x){
-//    x.parentElement.classList += 'has-jax'})
-//};

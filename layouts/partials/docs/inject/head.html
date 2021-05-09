@@ -1,3 +1,5 @@
+{{ if (findRE "\\$.+\\$" .Content 1) }}
 {{ $script := resources.Get "mathjax.js" | minify | fingerprint }}
 <script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-mml-chtml.js" integrity="sha256-ncNI9OXOS5Ek4tzVYiOMmN/KKCPZ6V0Cpv2P/zHntiA=" crossorigin="anonymous"></script>
+{{ end }}

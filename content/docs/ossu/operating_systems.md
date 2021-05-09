@@ -39,18 +39,18 @@ stateDiagram-v2
 **Blocked**: not ready. I/O request etc.  
 These decisions are made by OS **scheduler**.
 
-| Time | Process$_0$ | Process$_1$ | Notes                     |
+| Time | Process<sub>0</sub> | Process<sub>1</sub> | Notes                     |
 | ---- | ----------- | ----------- | ------------------------- |
 | 1    | Running     | Ready       |
 | 2    | Running     | Ready       |
-| 3    | Running     | Ready       | Process$_0$ initiates I/O |
-| 4    | Blocked     | Running     | Process$_0$ is blocked,   |
-| 5    | Blocked     | Running     | so Process$_1$ runs       |
+| 3    | Running     | Ready       | Process<sub>0</sub> /subinit>ates I/O |
+| 4    | Blocked     | Running     | Process<sub>0</sub> is blocked,   |
+| 5    | Blocked     | Running     | so Process<sub>1</sub> runs       |
 | 6    | Blocked     | Running     |
 | 7    | Ready       | Running     | I/O done                  |
-| 8    | Ready       | Running     | Process$_1$ now done      |
+| 8    | Ready       | Running     | Process<sub>1</sub> now done      |
 | 9    | Running     | –           |
-| 10   | Running     | –           | Process$_0$ now done      |
+| 10   | Running     | –           | Process<sub>0</sub> now done      |
 
 ### Process API
 **Shell** run code after the call to `fork()` (to create a new child process by copying parent) but before the call to `exec()` (to run the command); this code can alter the environment of the about-to-be-run program, and then waits for the command to complete by calling `wait()`. When the child completes, shell returns, ready for next command. This enables features like input/output redirection, pipes.
