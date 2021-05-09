@@ -23,7 +23,7 @@ DOS didn’t think memory protection was important; thus, a malicious applicatio
 **Time sharing** allows OS to share CPU resource, by **context-switch** (stop a program to run another). A **scheduling policy** let OS to decide which program to run.
 
 **Address space** is the memory the process can address, registers are also part of process's machine state. For example **program counter (PC, or instruction pointer IP)** tells which instruction to execute next, **stack pointer** and associated **frame pointer** are used to manage the stack for function parameters, local variables and return addresses.
-![](../../../../attachments/2021-04-28-12-29-07_program_to_process.png)
+![](attachments/2021-04-28-12-29-07_program_to_process.png)
 
 In early OSes loading done eagerly, modern OSes perform it lazily by **paging** and **swapping**.
 ### Process States

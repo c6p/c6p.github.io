@@ -1,0 +1,12 @@
+{{ if not (.Page.Scratch.Get "mermaid") }}
+<!-- Include mermaid only first time -->
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.9.3/dist/mermaid.min.js" integrity="sha256-OyJHvRcZHaRR6Ig73ppxF4QXk8HzvfgTprRWkulCkfY=" crossorigin="anonymous"></script>
+{{ with resources.Get "mermaid.json" }}
+  <script>window.onload=()=>mermaid.initialize({{ .Content | safeJS }})</script>
+{{ end }}
+{{ .Page.Scratch.Set "mermaid" true }}
+{{ end }}
+
+<p class="mermaid{{ with .Get "class" }} {{ . }}{{ end }}">
+  {{- .Inner -}}
+</p>

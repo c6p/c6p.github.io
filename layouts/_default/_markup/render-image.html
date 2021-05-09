@@ -1,0 +1,24 @@
+{{- $img := resources.Get .Destination -}}
+{{- $imgSrc := "" -}}
+{{- $imgSrcSet := slice -}}
+{{- $W := $img.Width -}}
+{{- $H := $img.Height -}}
+
+{{ $imgSrcSet = $imgSrcSet | append (printf "%s %dw" $img.RelPermalink $W) }}
+{{ range (slice 768 576 384 192) }}
+  {{ if (gt $img.Width (mul 1.2 .)) }}
+    {{ $srcUrl := (printf "%dx" . | $img.Resize).RelPermalink }}
+    {{ if eq $imgSrc "" }}{{ $imgSrc = $srcUrl }}{{ end }}
+    {{ $imgSrcSet = $imgSrcSet | append (printf "%s %dw" $srcUrl .) }}
+  {{ end }}
+{{ end }}
+{{ $imgSrcSet = (delimit $imgSrcSet ",") }}
+
+<figure>
+  <img src="{{ $img.RelPermalink }}" srcset="{{ $imgSrcSet }}" width="{{ $W }}" height="{{ $H }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }}>
+  {{ with .Title }}
+  <figcaption>{{ . }}</figcaption>
+  {{ end }}
+</figure>
+
+

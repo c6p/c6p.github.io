@@ -1,6 +1,7 @@
 @import "variables";
 
 .markdown {
+  max-width: 768px;
   line-height: 1.6;
 
   // remove padding at the beginning of page
@@ -67,6 +68,7 @@
 
   img {
     max-width: 100%;
+    height: auto;
   }
 
   code {
@@ -179,7 +181,8 @@
   }
 
   figure {
-    margin: $padding-16 0;
+    text-align: center;
+    margin: $padding-16 (-$padding-16);
     figcaption p {
       margin-top: 0;
     }
