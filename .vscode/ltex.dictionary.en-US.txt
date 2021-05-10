@@ -29,3 +29,11 @@ AutoRuns
 ripgrep
 Systemd
 systemd
+netlify
+Silverlight
+onClick
+hugo-extended
+KaTeX
+MathJax
+XMLHttpRequest
+WebSocket
