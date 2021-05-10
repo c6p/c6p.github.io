@@ -30,6 +30,13 @@
 <script defer src="{{ $swJS.RelPermalink }}" integrity="{{ $swJS.Data.Integrity }}"></script>
 {{ end -}}
 
+{{ if (findRE "\\$.+\\$" .Content 1) }}
+{{ with (resources.Get "mathjax.js" | minify | fingerprint) }}
+<script integrity="{{ .Data.Integrity }}">{{ .Content | safeJS }}</script>
+{{ end }}
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-mml-chtml.js" integrity="sha256-ncNI9OXOS5Ek4tzVYiOMmN/KKCPZ6V0Cpv2P/zHntiA=" crossorigin="anonymous"></script>
+{{ end }}
+
 <!-- RSS -->
 {{- with .OutputFormats.Get "rss" -}}
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}

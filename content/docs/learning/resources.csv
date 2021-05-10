@@ -1,5 +1,5 @@
 topic,platform,type,title,url,details,image
-git,web,tutorial,"Learn Git Branching",https://learngitbranching.js.org/,"<b>Interactive</b> git tutorial, game.",https://user-images.githubusercontent.com/7308241/39848730-040bd09e-53df-11e8-964e-2d48f35a4355.gif
+git,web,tutorial,"Learn Git Branching",https://learngitbranching.js.org/,"<b>Interactive</b> git tutorial, game.",
 git,web,cmdfu,"Oh Shit, Git!?!",https://ohshitgit.com/,"For <b>fixing</b> mistakes.",
 windows,web,cmdfu,"Privacy.sexy",https://privacy.sexy/,"Website to copy and paste privacy/security/bloat <b>PowerShell scripts</b>",
 drawing,web,tutorial,"Bezier game",https://bezier.method.ac/,"<b>Interactive</b> way to learn drawing perfect bezier curves.",
