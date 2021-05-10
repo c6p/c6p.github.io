@@ -13,7 +13,6 @@
   "foam.openDailyNote.directory": "journal",
   "foam.openDailyNote.titleFormat": "fullDate",
   "git.enableSmartCommit": true,
-  "git.postCommitCommand": "sync",
   "markdown.preview.breaks": true,
   "pasteImage.path": "${projectRoot}/attachments",
   "pasteImage.showFilePathConfirmInputBox": true,
