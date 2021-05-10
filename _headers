@@ -2,7 +2,7 @@
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   X-Content-Type-Options: nosniff
   X-XSS-Protection: 1; mode=block
-  Content-Security-Policy: default-src 'none'; base-uri 'self'; manifest-src 'self'; connect-src 'self'; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:; script-src 'sha256-bhmJoIC3YIYXV97TU9ErG8rOMntLK8xVVOwL2u9BqoA=' 'sha256-MktN23nRzohmT1JNxPQ0B9CzVW6psOCbvJ20j9YxAxA=' 'sha256-ncNI9OXOS5Ek4tzVYiOMmN/KKCPZ6V0Cpv2P/zHntiA=' 'sha256-OBZ1TAxtlr9xf3a+8VMnoX0v39PPCWCsN6DfNkKio/I=' 'sha256-OyJHvRcZHaRR6Ig73ppxF4QXk8HzvfgTprRWkulCkfY=' 'sha256-vlTmGAKWgBGxhfPI6r2aGtY9v9YXdRdwDc1bQkegBh4=' 'strict-dynamic' 'self' 'unsafe-inline' https:; style-src 'sha256-1elpDnMA9UHppvgmxiheKz8R0auMZjStXhxESxVlQi8=' 'sha256-9Y2qE43xkvsms6wjzUmp5RFqw3vBmFiYcfM6EQnMhpQ=' 'self'; object-src 'none'
+  Content-Security-Policy: default-src 'none'; base-uri 'self'; manifest-src 'self'; connect-src 'self'; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:; script-src 'sha256-bhmJoIC3YIYXV97TU9ErG8rOMntLK8xVVOwL2u9BqoA=' 'sha256-MktN23nRzohmT1JNxPQ0B9CzVW6psOCbvJ20j9YxAxA=' 'sha256-ncNI9OXOS5Ek4tzVYiOMmN/KKCPZ6V0Cpv2P/zHntiA=' 'sha256-OBZ1TAxtlr9xf3a+8VMnoX0v39PPCWCsN6DfNkKio/I=' 'sha256-OyJHvRcZHaRR6Ig73ppxF4QXk8HzvfgTprRWkulCkfY=' 'sha256-vlTmGAKWgBGxhfPI6r2aGtY9v9YXdRdwDc1bQkegBh4=' 'strict-dynamic' 'self' 'unsafe-inline' https:; style-src 'sha256-9Y2qE43xkvsms6wjzUmp5RFqw3vBmFiYcfM6EQnMhpQ=' 'self' 'unsafe-inline' https://cdn.jsdelivr.net; object-src 'none'
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin
   Permission-Policy: 'self'
