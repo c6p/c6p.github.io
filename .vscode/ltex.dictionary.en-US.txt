@@ -37,3 +37,4 @@ KaTeX
 MathJax
 XMLHttpRequest
 WebSocket
+FlexSearch

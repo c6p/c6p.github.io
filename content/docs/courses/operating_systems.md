@@ -1,7 +1,5 @@
 My [CS-537: Introduction to Operating Systems](https://pages.cs.wisc.edu/~remzi/Classes/537/Spring2018/) course notes from [OSSU](https://github.com/ossu/computer-science#core-systems) curriculum.
 
-Math functionality test: $\sigma^2$ 
-$$\frac{2}{\epsilon}$$
 ## History
 ### Just Libraries
 OS would provide API. Jobs set up and then run in a `batch` by the operator. Computers were not interactive.
