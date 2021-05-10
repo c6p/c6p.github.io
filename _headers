@@ -2,7 +2,7 @@
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   X-Content-Type-Options: nosniff
   X-XSS-Protection: 1; mode=block
-  Content-Security-Policy: default-src 'none'; base-uri 'self'; manifest-src 'self'; connect-src 'self'; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:; script-src-elem 'sha256-aECzxYUJ57J5H6YymaVqtppSpIqD2Z9YAIAZfd/2xMY=' 'sha256-bhmJoIC3YIYXV97TU9ErG8rOMntLK8xVVOwL2u9BqoA=' 'sha256-MktN23nRzohmT1JNxPQ0B9CzVW6psOCbvJ20j9YxAxA=' 'sha256-ncNI9OXOS5Ek4tzVYiOMmN/KKCPZ6V0Cpv2P/zHntiA=' 'sha256-OBZ1TAxtlr9xf3a+8VMnoX0v39PPCWCsN6DfNkKio/I=' 'sha256-OyJHvRcZHaRR6Ig73ppxF4QXk8HzvfgTprRWkulCkfY=' 'sha256-PZxQqGbQvT0LF3arLn62OUekFw/i7IcH3KrllaA28pk=' 'strict-dynamic'; script-src 'sha256-aECzxYUJ57J5H6YymaVqtppSpIqD2Z9YAIAZfd/2xMY=' 'sha256-MktN23nRzohmT1JNxPQ0B9CzVW6psOCbvJ20j9YxAxA=' 'sha256-OBZ1TAxtlr9xf3a+8VMnoX0v39PPCWCsN6DfNkKio/I=' 'self' https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-mml-chtml.js https://cdn.jsdelivr.net/npm/mermaid@8.9.3/dist/mermaid.min.js; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; object-src 'none'
+  Content-Security-Policy: default-src 'none'; base-uri 'self'; manifest-src 'self'; connect-src 'self'; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:; script-src 'sha256-aECzxYUJ57J5H6YymaVqtppSpIqD2Z9YAIAZfd/2xMY=' 'sha256-MktN23nRzohmT1JNxPQ0B9CzVW6psOCbvJ20j9YxAxA=' 'sha256-OBZ1TAxtlr9xf3a+8VMnoX0v39PPCWCsN6DfNkKio/I=' 'self' https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-mml-chtml.js https://cdn.jsdelivr.net/npm/mermaid@8.9.3/dist/mermaid.min.js; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; object-src 'none'
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin
   Permission-Policy: 'self'
