@@ -20,14 +20,15 @@ Setting up a site on [netlify](https://www.netlify.com/) from GitHub is trivial.
 Our response headers are in `_headers` file at the root of publish directory. Mozilla suggests starting with `default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self'` for CSP.
 
 * `base-uri` - restrict URLs for `<base>`
-* Fetch directives:
-  * `default-src` - default policy for allowed fallback sources
-  * `img-src` - for images
-  * `font-src` - for fonts
-  * `script-src` - for scripts, i.e. JavaScript
-  * `style-src` - for styles, i.e. CSS
-  * `connect-src` - e.g. XMLHttpRequest, WebSocket
-  * `object-src` - for plugins, e.g. Flash, Silverlight
+| Directive | Feature |
+|-:|:-|
+| `default-src` | default policy for allowed fallback sources |
+| `img-src` | for images |
+| `font-src` | for fonts |
+| `script-src` | for scripts, i.e. JavaScript |
+| `style-src` | for styles, i.e. CSS |
+| `connect-src` | e.g. XMLHttpRequest, WebSocket |
+| `object-src` | for plugins, e.g. Flash, Silverlight |
 
 {{< hint info >}}
 * `'none'` - nothing
@@ -82,7 +83,7 @@ It seems [CSP-2](https://www.w3.org/TR/CSP2/) (current W3C Recommendation) only 
 
 I created a git pre-commit hook to update hashes whenever I commit my site, in *PowerShell* being on Windows. Search is using *ripgrep*, `-oIN` meaning only print matches without filename or line numbers, and `-r` to modify result by adding single quotes around it. Unique results filtered and joined on a single line, and written to a file. 
 
-Where first regexp for all integrity strings, second one filters only inline scripts, and third one generating 
+Where first regexp for all integrity strings, second one filters only inline scripts, and third one listing sources of external scripts.
 ```posh
 hugo --minify
 (rg -oIN '<script.*?(sha\d{3}-.{43}=)\"' -r '''$1''' public | sort -unique) -join ' ' | out-file -encoding ASCII -noNewline data/script_hash.txt 
@@ -94,14 +95,17 @@ Hugo layout template `index.headers` is used to generate `_headers`. Here is onl
 ```html {.wrap}
 script-src {{readFile "data/inline_script_hash.txt"}} 'self' {{readFile "data/external_script_source.txt"}};
 ```
-And the result **A+**.
-```html {.wrap}
-script-src 'sha256-aECzxYUJ57J5H6YymaVqtppSpIqD2Z9YAIAZfd/2xMY=' 'sha256-MktN23nRzohmT1JNxPQ0B9CzVW6psOCbvJ20j9YxAxA=' 'sha256-OBZ1TAxtlr9xf3a+8VMnoX0v39PPCWCsN6DfNkKio/I=' 'self' https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-mml-chtml.js https://cdn.jsdelivr.net/npm/mermaid@8.9.3/dist/mermaid.min.js;
-```
-
-Whole content security policy line:
+And the result is **A+**. Whole content security policy line:
 ```html
-Content-Security-Policy: default-src 'none'; base-uri 'self'; manifest-src 'self'; connect-src 'self'; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:; script-src 'sha256-aECzxYUJ57J5H6YymaVqtppSpIqD2Z9YAIAZfd/2xMY=' 'sha256-MktN23nRzohmT1JNxPQ0B9CzVW6psOCbvJ20j9YxAxA=' 'sha256-OBZ1TAxtlr9xf3a+8VMnoX0v39PPCWCsN6DfNkKio/I=' 'self' https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-mml-chtml.js https://cdn.jsdelivr.net/npm/mermaid@8.9.3/dist/mermaid.min.js; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; object-src 'none'
+default-src 'none';
+base-uri 'self';
+manifest-src 'self';
+connect-src 'self';
+font-src 'self' https://cdn.jsdelivr.net; 
+img-src 'self' data:;
+script-src 'sha256-aECzxYUJ57J5H6YymaVqtppSpIqD2Z9YAIAZfd/2xMY=' 'sha256-MktN23nRzohmT1JNxPQ0B9CzVW6psOCbvJ20j9YxAxA=' 'sha256-OBZ1TAxtlr9xf3a+8VMnoX0v39PPCWCsN6DfNkKio/I=' 'self' https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-mml-chtml.js https://cdn.jsdelivr.net/npm/mermaid@8.9.3/dist/mermaid.min.js;
+style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
+object-src 'none'
 ```
 ### Further Reading
 * [Google Developer Documentation](https://developers.google.com/web/fundamentals/security/csp)

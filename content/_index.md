@@ -6,7 +6,7 @@ I am Can Altıparmak, and this is my log/notebook.
 {{< button href="https://gitlab.com/c6p" >}}{{< icon gitlab >}}Gitlab{{< /button >}}
 {{< button href="https://stackoverflow.com/users/657595/c6p" >}}{{< icon stack-overflow >}}StackOverflow{{< /button >}}
 {{< button href="https://www.linkedin.com/in/can-a-9453a3159" >}}{{< icon linkedin >}} Linkedin{{< /button >}}
-{{< button href="https://aur.archlinux.org/account/c6p" >}}{{< icon archlinux >}} AUR{{< /button >}}
+{{< button href="https://aur.archlinux.org/packages/?O=0&SeB=M&K=c6p" >}}{{< icon archlinux >}} AUR{{< /button >}}
 
 ### Projects
 Games made for {{< button href="https://withkoji.com/@c6p" >}}koji{{< /button >}}
