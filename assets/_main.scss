@@ -41,6 +41,10 @@ img {
   @include outline;
 }
 
+nav#TableOfContents > ul {
+  padding-left: .5em;
+  border-left: 1px solid var(--body-font-color);
+}
 aside nav ul {
   padding: 0;
   margin: 0;
@@ -302,7 +306,7 @@ aside nav,
 .markdown {
   transition: 0.2s ease-in-out;
   transition-property: transform, margin, opacity, visibility;
-  will-change: transform, margin, opacity;
+  will-change: auto; /*transform, margin, opacity;*/
 }
 
 @media screen and (max-width: $mobile-breakpoint) {
@@ -377,6 +381,6 @@ aside nav,
   .book-page,
   .book-menu nav,
   .book-toc nav {
-    padding: $padding-16 * 2 $padding-16;
+    padding: $padding-16 * 2 $padding-8;
   }
 }

@@ -2,16 +2,22 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "update exercism.md",
+      "label": "exercism",
       "type": "shell",
       "command": "${config:python.pythonPath}",
       "args": ["helpers\\exercism_markdown.py", ">", "docs\\learning\\exercism.md"]
     },
     {
-      "label": "hugo server",
+      "label": "hugo",
       "type": "shell",
       "command": "hugo",
       "args": ["server", "--minify"]
-    }
+    },
+    {
+      "label": "hash",
+      "type": "shell",
+      "command": "powershell",
+      "args": ["helpers\\sri.ps1"]
+    },
   ]
 }

@@ -27,8 +27,9 @@ div.post-meta {
   justify-content: space-around;
   align-items: center;
   filter: grayscale(100%);
+  font-size: $font-size-14;
 
-  & * { margin: .5em; }
+  & * { margin: 0; }
 }
 h5.date {
   display: inline-block;
@@ -46,7 +47,6 @@ div.tags a::before { content:"#"; }
 div.categories a::before { content:"@"; }
 
 .book-post {
-  position: absolute;
   & > * {
     margin-top: 0em !important;
     margin-bottom: .5em !important;

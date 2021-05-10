@@ -16,8 +16,8 @@
 
 <figure>
   <img src="{{ $img.RelPermalink }}" srcset="{{ $imgSrcSet }}" width="{{ $W }}" height="{{ $H }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }}>
-  {{ with .Title }}
-  <figcaption>{{ . }}</figcaption>
+  {{ with .Text }}
+  <figcaption>{{ . | safeHTML }}</figcaption>
   {{ end }}
 </figure>
 
