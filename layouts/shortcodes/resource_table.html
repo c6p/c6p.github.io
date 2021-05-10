@@ -4,13 +4,13 @@
 {{ with .Get 0 }}
 {{ $data := after 1 (getCSV "," (print "content/" $.Page.File.Dir .)) }}
 
-<select id="resource_topic" onchange="filter_resources()">
+<select id="resource_topic">
   <option value=""> Select Topic...</option>
   {{ range sort (uniq (apply $data "index" "." 0)) }}
   <option value="{{ . }}1">{{ . }}</option>
   {{ end }}
 </select>
-<select id="resource_type" onchange="filter_resources()">
+<select id="resource_type">
   <option value=""> Select Type...</option>
   {{ range sort (uniq (apply $data "index" "." 2)) }}
   <option value="{{ . }}2">{{ . }}</option>

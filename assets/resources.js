@@ -14,3 +14,8 @@ function filter_resources() {
     Array.from(table.getElementsByTagName("tr")).forEach(show);
   }
 }
+
+window.onload = function() {
+  document.getElementById("resource_topic").onchange = filter_resources;
+  document.getElementById("resource_type").onchange = filter_resources;
+}

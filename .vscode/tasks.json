@@ -16,7 +16,7 @@
     {
       "label": "hash",
       "type": "shell",
-      "command": "powershell",
+      "command": "pwsh",
       "args": ["helpers\\sri.ps1"]
     },
   ]
