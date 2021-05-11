@@ -37,10 +37,6 @@ img {
   vertical-align: baseline;
 }
 
-:focus {
-  /*@include outline;*/
-}
-
 nav#TableOfContents > ul {
   padding-left: .5em;
   border-left: 1px solid var(--body-font-color);
@@ -165,7 +161,7 @@ ul.pagination {
   position: fixed;
   width: 100%;
   top: 0;
-  padding: .5em 3em 0 3em;
+  padding: .5rem 3rem 0 3rem;
 
   label {
     line-height: 0;
@@ -314,7 +310,7 @@ aside nav,
 .book-page,
 .book-header aside,
 .markdown {
-  transition: 0.2s ease-in-out;
+  transition: 0.1s ease-in-out;
   transition-property: transform, margin, opacity, visibility;
   will-change: auto; /*transform, margin, opacity;*/
 }
