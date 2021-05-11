@@ -155,7 +155,7 @@ ul.pagination {
   margin-bottom: $padding-16 * 3;
 }
 
-.book-header {
+#book-header {
   display: none;
   margin-bottom: $padding-16;
   position: fixed;
@@ -308,7 +308,7 @@ ul.pagination {
 // Responsive styles
 aside nav,
 .book-page,
-.book-header aside,
+#book-header,
 .markdown {
   transition: 0.1s ease-in-out;
   transition-property: transform, margin, opacity, visibility;
@@ -336,7 +336,7 @@ aside nav,
     @include fixed;
   }
 
-  .book-header {
+ #book-header {
     display: block;
   }
 
@@ -398,6 +398,6 @@ aside nav,
   .book-page,
   .book-menu nav,
   .book-toc nav {
-    padding: $padding-16 * 2 $padding-8;
+    padding: $padding-16 $padding-8;
   }
 }
