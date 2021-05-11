@@ -88,7 +88,10 @@ div.categories a::before { content:"@"; }
   & .book-post { border-top: 1px solid gray; }
 }
 
-.book-page { padding: 2rem 0; }
+.book-page {
+  padding: 2rem 0;
+  & > .markdown, & > #posts { margin: auto }
+}
 .markdown { padding: 1rem; }
 div.highlight { margin: 0 -1rem; }
 figure.inline {

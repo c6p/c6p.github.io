@@ -1,5 +1,5 @@
 /*
-  Cache-Control: max-age=3600
+  Cache-Control: max-age=300
   Strict-Transport-Security: max-age=86400; includeSubDomains; preload
   X-Content-Type-Options: nosniff
   X-XSS-Protection: 1; mode=block

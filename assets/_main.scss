@@ -38,12 +38,13 @@ img {
 }
 
 :focus {
-  @include outline;
+  /*@include outline;*/
 }
 
 nav#TableOfContents > ul {
   padding-left: .5em;
   border-left: 1px solid var(--body-font-color);
+  background: var(--body-background);
 }
 aside nav ul {
   padding: 0;
@@ -161,9 +162,18 @@ ul.pagination {
 .book-header {
   display: none;
   margin-bottom: $padding-16;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: .5em 3em 0 3em;
 
   label {
     line-height: 0;
+    padding: .2em;
+    border-radius: .2em;
+    border: 1px solid var(--body-font-color);
+    background: var(--body-background);
+    opacity: 50%;
   }
 }
 
@@ -210,12 +220,12 @@ ul.pagination {
 
 .book-toc {
   flex: 0 0 $toc-width;
-  font-size: $font-size-12;
+  font-size: $font-size-14;
 
   nav {
     width: $toc-width;
     padding: $padding-16;
-
+    background: var(--body-background);
     @include fixed;
   }
 
@@ -323,7 +333,11 @@ aside nav,
   }
 
   .book-toc {
-    display: none;
+    visibility: initial;
+    left: 100%;
+    font-size: $font-size-base;
+    z-index: 1;
+    @include fixed;
   }
 
   .book-header {
@@ -350,7 +364,7 @@ aside nav,
 
     .book-menu-overlay {
       display: block;
-      position: absolute;
+      position: fixed;
       top: 0;
       bottom: 0;
       left: 0;
@@ -363,15 +377,22 @@ aside nav,
   }
 
   #toc-control:checked ~ main {
-    .book-header aside {
-      display: block;
+    .book-toc {
+      visibility: initial;
     }
-  }
 
-  //for RTL support
-  body[dir="rtl"] #menu-control:checked + main {
-    .book-menu nav {
-      transform: translateX(-$menu-width);
+    .book-toc nav {
+      transform: translateX(-$toc-width);
+      box-shadow: 0 0 $padding-8 rgba(0, 0, 0, 0.1);
+    }
+
+    .book-toc-overlay {
+      display: block;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
   }
 }
