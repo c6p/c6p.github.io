@@ -1,4 +1,9 @@
-'use strict';(function(){const input=document.querySelector('#book-search-input');const results=document.querySelector('#book-search-results');if(!input){return}
+const bp=getComputedStyle(document.documentElement).getPropertyValue('--mobile-breakpoint');const mq=window.matchMedia(`(max-width: ${bp})`)
+let prev=window.pageYOffset;window.onscroll=function(){if(!mq.matches)
+return
+const cur=window.pageYOffset;const header=document.getElementById("book-header")
+if(prev>cur){header.style.transform="translateY(0)"}else{header.style.transform="translateY(-5rem)"}
+prev=cur};window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']],processEscapes:true,processEnvironments:true},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code'],renderActions:{addMenu:[]}}};;'use strict';(function(){const input=document.querySelector('#book-search-input');const results=document.querySelector('#book-search-results');if(!input){return}
 input.addEventListener('focus',init);input.addEventListener('keyup',search);document.addEventListener('keypress',focusSearchFieldOnKeyPress);function focusSearchFieldOnKeyPress(event){if(input===document.activeElement){return;}
 const characterPressed=String.fromCharCode(event.charCode);if(!isHotkey(characterPressed)){return;}
 input.focus();event.preventDefault();}
