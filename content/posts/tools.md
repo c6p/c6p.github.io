@@ -1,7 +1,6 @@
 ---
 title: Developer and Power User Tools List
-date: 2021-05-02
-datetime: 2021-05-02 18:03:51
+date: 2021-05-02T18:03:51
 categories: [ configuration ]
 tags: [ windows, linux, maintenance ]
 ---

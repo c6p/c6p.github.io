@@ -61,14 +61,31 @@ div.categories a::before { content:"@"; }
 }
 
 #posts {
-  position: relative;
+  border-collapse:collapse;
   /*display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-template-rows: masonry;*/
 
-  & div.post-meta { font-size: .8em; }
+  & td.date {
+    padding:0;
+    text-align: center;
+    vertical-align: top;
+    background:linear-gradient(gray, gray) no-repeat center/2px 100%;
+    transform: translateY(-.5em);
+
+    & span {
+      display:block;
+      padding-bottom:.3em;
+      background:var(--body-background);
+    }
+    & .day {
+      font-weight:bold;
+      font-size:1.5em
+    }
+    & .month { color: var(--em-font-color); }
+  }
   & a.read-more { filter: grayscale(100%); }
-  & .book-post { border-top: 1px solid var(--body-font-color); }
+  & .book-post { border-top: 1px solid gray; }
 }
 
 .book-page { padding: 2rem 0; }
@@ -82,3 +99,4 @@ figure.inline {
 a.book-btn { margin: .2em .1em; }
 
 .wrap > pre { white-space: pre-wrap; }
+.active { font-weight: bold; }

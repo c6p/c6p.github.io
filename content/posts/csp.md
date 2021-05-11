@@ -1,7 +1,6 @@
 ---
 title: Demistifying Content Securiy Policy
-date: 2021-05-09
-datetime: 2021-05-09 20:42:49 
+date: 2021-05-10T20:42:49 
 categories: [configuration]
 tags: [security, web]
 ---
