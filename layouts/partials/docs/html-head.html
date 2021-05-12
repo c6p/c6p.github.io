@@ -21,9 +21,8 @@
 
 {{- $searchJSFile := printf "%s.search.js" .Language.Lang -}}
 {{- $searchJS := resources.Get "search.js" | resources.ExecuteAsTemplate $searchJSFile . -}}
-{{- $header := resources.Get "hide-header.js" -}}
 {{- $mathjax := resources.Get "mathjax.js" -}}
-{{ with (slice $header $mathjax $searchJS | resources.Concat "bundle.js" | minify | fingerprint) }}
+{{ with (slice $mathjax $searchJS | resources.Concat "bundle.js" | minify | fingerprint) }}
 <script defer src="{{.RelPermalink}}" integrity="{{ .Data.Integrity }}"></script>
 {{ end }}
 {{ if (findRE "(\\\\(.+\\\\)|\\\\[.+\\\\])" .Content 1) }}
