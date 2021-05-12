@@ -2,7 +2,7 @@
 title: Demistifying Content Securiy Policy
 date: 2021-05-10T20:42:49+03:00
 categories: [config]
-tags: [security, web]
+tags: [security]
 ---
 
 After I have built the site, the next step was checking performance and security. The **log**, besides being my learning notebook, is also a test-bed for my experiments.
