@@ -1,7 +1,7 @@
 ---
 title: Demistifying Content Securiy Policy
-date: 2021-05-10T20:42:49 
-categories: [configuration]
+date: 2021-05-10T20:42:49+03:00
+categories: [config]
 tags: [security, web]
 ---
 
@@ -110,3 +110,6 @@ object-src 'none'
 * [Google Developer Documentation](https://developers.google.com/web/fundamentals/security/csp)
 * [CSP Quick Reference Guide](https://content-security-policy.com/)
 * [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
+
+*[CSP]: Content Security Policy
+*[XSS]: Cross Site Scripting

@@ -26,7 +26,7 @@
 {{ with (slice $header $mathjax $searchJS | resources.Concat "bundle.js" | minify | fingerprint) }}
 <script defer src="{{.RelPermalink}}" integrity="{{ .Data.Integrity }}"></script>
 {{ end }}
-{{ if (findRE "\\$.+\\$" .Content 1) }}
+{{ if (findRE "(\\\\(.+\\\\)|\\\\[.+\\\\])" .Content 1) }}
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-mml-chtml.js" integrity="sha256-ncNI9OXOS5Ek4tzVYiOMmN/KKCPZ6V0Cpv2P/zHntiA=" crossorigin="anonymous"></script>
 {{ end }}
 

@@ -1,7 +1,7 @@
 ---
 title: Developer and Power User Tools List
-date: 2021-05-02T18:03:51
-categories: [ configuration ]
+date: 2021-05-02T18:03:51+03:00
+categories: [ config ]
 tags: [ windows, linux, maintenance ]
 ---
 Inspired by [Hanselman Ultimate Tool List](https://www.hanselman.com/tools), check out for even more awesome tools.

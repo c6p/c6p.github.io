@@ -21,6 +21,7 @@
     line-height: 1;
     margin-top: 1.5em;
     margin-bottom: $padding-16;
+    color: var(--body-font-color);
 
     a.anchor {
       opacity: 0;
@@ -34,9 +35,6 @@
       opacity: initial;
     }
 
-    a, a:visited {
-      color: var(--body-font-color);
-    }
   }
 
   h5 {
@@ -101,10 +99,10 @@
     border-inline-start: $padding-4 solid var(--gray-200);
     border-radius: $border-radius;
 
-    :first-child {
+    > :first-child {
       margin-top: 0;
     }
-    :last-child {
+    > :last-child {
       margin-bottom: 0;
     }
   }

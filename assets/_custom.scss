@@ -94,12 +94,12 @@ div.categories a::before { content:"@"; }
 }
 .markdown { padding: 1rem; }
 div.highlight { margin: 0 -1rem; }
-figure.inline {
-  display: inline-block;
-  margin: 0;
-  text-align: center;
-}
-a.book-btn { margin: .2em .1em; }
+figure img { margin: .2em; }
+figure.inline { display: inline-block; }
+figure.right img { float: right; }
+figure.left img { float: left; }
+figure.inline, figure.right, figure.left { margin: 0; }
 
-.wrap > pre { white-space: pre-wrap; }
+a.book-btn { margin: .2em .1em; }
 .active { font-weight: bold; }
+.wrap > pre { white-space: pre-wrap; }

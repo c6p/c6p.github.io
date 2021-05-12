@@ -1,0 +1,48 @@
+{{- $imgSrcSet := slice -}}
+{{- $W := .Get "width" -}}
+{{- $H := .Get "height" -}}
+{{ if (fileExists (printf "assets/%s" (.Get "src"))) }}
+    {{- $img := resources.Get (.Get "src") -}}
+    {{- $imgSrc := "" -}}
+    {{- $W = $img.Width -}}
+    {{- $H = $img.Height -}}
+
+    {{ $imgSrcSet = $imgSrcSet | append (printf "%s %dw" $img.RelPermalink $W) }}
+    {{ range (slice 768 576 384 192) }}
+      {{ if (gt $img.Width (mul 1.2 .)) }}
+        {{ $srcUrl := (printf "%dx" . | $img.Resize).RelPermalink }}
+        {{ if eq $imgSrc "" }}{{ $imgSrc = $srcUrl }}{{ end }}
+        {{ $imgSrcSet = $imgSrcSet | append (printf "%s %dw" $srcUrl .) }}
+      {{ end }}
+    {{ end }}
+    {{ $imgSrcSet = (delimit $imgSrcSet ",") }}
+{{ end }}
+
+<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
+    {{- if .Get "link" -}}
+        <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+    {{- end -}}
+    <img src="{{ .Get "src" }}" {{with $imgSrcSet}}srcset="{{ . }}"{{end}}
+         {{- if or (.Get "alt") (.Get "caption") }}
+         alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
+         {{- end -}}
+         {{- with $W }}width="{{ . }}"{{ end -}}
+         {{- with $H }}height="{{ . }}"{{ end -}}
+    /><!-- Closing img tag -->
+    {{- if .Get "link" }}</a>{{ end -}}
+    {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
+        <figcaption>
+            {{ with (.Get "title") -}}
+                <h4>{{ . }}</h4>
+            {{- end -}}
+            {{- if or (.Get "caption") (.Get "attr") -}}<p>
+                {{- .Get "caption" | markdownify -}}
+                {{- with .Get "attrlink" }}
+                    <a href="{{ . }}">
+                {{- end -}}
+                {{- .Get "attr" | markdownify -}}
+                {{- if .Get "attrlink" }}</a>{{ end }}</p>
+            {{- end }}
+        </figcaption>
+    {{- end }}
+</figure>

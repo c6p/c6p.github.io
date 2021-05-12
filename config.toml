@@ -38,4 +38,6 @@ BookTheme = "dark"
     [markup.goldmark.renderer]
       unsafe = true
     [markup.goldmark.parser]
-      attribute = true
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
