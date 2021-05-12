@@ -152,7 +152,7 @@ ul.pagination {
 }
 
 .book-post {
-  margin-bottom: $padding-16 * 3;
+  margin-bottom: $padding-16 * 2;
 }
 
 #book-header {
@@ -161,7 +161,7 @@ ul.pagination {
   position: fixed;
   width: 100%;
   top: 0;
-  padding: .5rem 3rem 0 3rem;
+  padding: .5rem 1rem 0 2rem;
 
   label {
     line-height: 0;
@@ -223,6 +223,13 @@ ul.pagination {
     padding: $padding-16;
     background: var(--body-background);
     @include fixed;
+
+    &::before {
+      content: "Contents";
+      padding: 0 0 1rem .5rem;
+      display: block;
+      font-weight: bold;
+    }
   }
 
   img {

@@ -27,7 +27,8 @@ div.post-meta {
   justify-content: space-around;
   align-items: center;
   filter: grayscale(100%);
-  font-size: $font-size-14;
+  border-bottom: 1px solid;
+  padding-bottom: .2rem;
 
   & * { margin: 0; }
 }
@@ -60,32 +61,37 @@ div.categories a::before { content:"@"; }
   }
 }
 
+#breadcrumbs { margin: 0 1em; }
+#book-header {
+  background: rgba(0,0,0,.5);
+}
 #posts {
-  border-collapse:collapse;
   /*display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-template-rows: masonry;*/
 
-  & td.date {
-    padding:0;
-    text-align: center;
-    vertical-align: top;
-    background:linear-gradient(gray, gray) no-repeat center/2px 100%;
-    transform: translateY(-.5em);
-
-    & span {
-      display:block;
-      padding-bottom:.3em;
-      background:var(--body-background);
-    }
-    & .day {
+  article { clear: both; }
+  .readtime {
+    float: left;
+    margin-left: 1rem;
+    margin-top: .5em;
+  }
+  .date {
+    float: right;
+    margin-right: 1rem;
+    .day {
       font-weight:bold;
       font-size:1.5em
     }
-    & .month { color: var(--em-font-color); }
+    .month { color: var(--em-font-color); }
   }
-  & a.read-more { filter: grayscale(100%); }
-  & .book-post { border-top: 1px solid gray; }
+  a.read-more { filter: grayscale(100%); }
+  .book-post { border-top: 1px solid gray; }
+}
+.markdown table.pages { 
+  border-collapse:collapse;
+  td { border-style: none}
+  td:nth-child(3) { border-right-style: solid; }
 }
 
 .book-page {

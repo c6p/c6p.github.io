@@ -2,7 +2,7 @@
   <label for="menu-control">
     <img src="{{ "svg/menu.svg" | relURL }}" width="24" height="24" class="book-icon" alt="Menu" />
   </label>
-
+  {{ partial "docs/breadcrumbs.html" . }}
   <label for="toc-control">
     {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
     <img src="{{ "svg/toc.svg" | relURL }}" width="24" height="24" class="book-icon" alt="Table of Contents" />

@@ -2,6 +2,11 @@ languageCode = "en-us"
 title = "c6p - log"
 theme = "book"
 
+[params]
+BookTheme = "dark"
+BookLogo = "/svg/home.svg"
+BookDateFormat = 'January 2, 2006 15:04'
+
 #[server]
 #  [[server.headers]]
 #    for = "/**.html"
@@ -25,9 +30,6 @@ mediatype = "text/netlify"
 baseName = "_headers"
 isPlainText = true
 notAlternative = true
-
-[params]
-BookTheme = "dark"
 
 [markup]
   [markup.highlight]

@@ -1,0 +1,25 @@
+<table class="pages">
+  {{ $year := "" }}
+  {{ $month := "" }}
+  {{ $day := "" }}
+  {{ $time := "" }}
+{{ range (where $.Site.RegularPages "Type" "posts") }}
+  {{ $y := .Date.Format "2006" }}
+  {{ $m := .Date.Format "Jan" }}
+  {{ $d := .Date.Format "02" }}
+  <tr>
+      <td>{{ if ne $year $y }}
+        {{ $year = $y }}{{ $y }}
+      {{ end }}</td>
+      <td>{{ if or (ne $month $m) (ne $year $y) }}
+        {{ $month = $m }}{{ $m }}
+      {{ end }}</td>
+      <td>{{ if or (ne $day $d) (ne $month $m) (ne $year $y) }}
+        {{ $day = $d }}{{ $d }}
+      {{ end }}</td>
+    <td>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </td>
+  </tr>
+  {{ end }}
+</table>

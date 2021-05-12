@@ -1,45 +1,28 @@
 {{ define "main" }}
-  <table id="posts">
-  {{ $year := "" }}
-  {{ $month := "" }}
-  {{ $day := "" }}
-  {{ $time := "" }}
+  <div id="posts">
   {{ range sort .Paginator.Pages }}
-  {{ $y := .Date.Format "2006" }}
-  {{ $m := .Date.Format "Jan" }}
-  {{ $d := .Date.Format "02" }}
-  {{ $t := .Date.Format "15:04" }}
-  <tr>
-    <td class="date">
-      {{ if or (ne $time $t) (ne $day $d) (ne $month $m) (ne $year $y) }}
-        <span>{{ $time = $t }}{{ $t }}</span>
-      {{ end }}
-      {{ if or (ne $day $d) (ne $month $m) (ne $year $y) }}
-        <span class="day">{{ $day = $d }}{{ $d }}</span>
-      {{ end }}
-      {{ if or (ne $month $m) (ne $year $y) }}
-        <span class="month">{{ $month = $m }}{{ $m }}</span>
-      {{ end }}
-      {{ if ne $year $y }}
-        <span>{{ $year = $y }}{{ $y }}</span>
-      {{ end }}
-    </td>
-    <td>
-      <article class="markdown book-post">
-        <h2>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </h2>
-        <p>
-          {{- .Summary -}}
-          {{ if .Truncated }}
-            <a class="read-more" href="{{ .RelPermalink }}">read more ...</a>
-          {{ end }}
-        </p>
-      </article>
-    </td>
-  </tr>
+  {{ $year := .Date.Format "2006" }}
+  {{ $month := .Date.Format "Jan" }}
+  {{ $day := .Date.Format "02" }}
+    <div class="readtime">{{.ReadingTime}} mins</div>
+    <div class="date">
+        <span class="day">{{ $day }}</span>
+        <span class="month">{{ $month }}</span>
+        <span>{{ $year }}</span>
+    </div>
+    <article class="markdown book-post">
+      <h2>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h2>
+      <p>
+        {{- .Summary -}}
+        {{ if .Truncated }}
+          <a class="read-more" href="{{ .RelPermalink }}">read more ...</a>
+        {{ end }}
+      </p>
+    </article>
   {{ end }}
-</table>
+</div>
   {{ template "_internal/pagination.html" . }}
 {{ end }}
 

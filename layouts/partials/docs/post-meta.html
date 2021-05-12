@@ -1,8 +1,4 @@
 <div class="post-meta">
-{{ with .Date}}
-  <h5 class="date">{{ partial "docs/date" (dict "Date" . "Format" $.Site.Params.BookDateFormat) }}</h5>
-{{ end }}
-
 {{ range $taxonomy, $_ := .Site.Taxonomies }}
   {{ with $terms := $.GetTerms $taxonomy }}
   <div class="{{ $taxonomy }}">
@@ -11,5 +7,8 @@
     {{- end }}
   </div>
   {{ end }}
+{{ end }}
+{{ with .Date}}
+  <h5 class="date">{{ partial "docs/date" (dict "Date" . "Format" $.Site.Params.BookDateFormat) }}</h5>
 {{ end }}
 </div>
