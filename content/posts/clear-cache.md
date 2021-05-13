@@ -1,13 +1,20 @@
 ---
-title: Ge Fresh Pages with Messed Up Caches
+title: Get Fresh Pages with Messed Up Caches
 date: 2021-05-13T10:27:22+03:00
 categories: [config]
-tags: [security]
+tags: []
 ---
-While fixing `Content-Security-Policy` header, I have messed up the caches. Accidentally pushed a change to keep all pages in the cache indefinitely. Situation: browsers are serving stale pages.
+While fixing `Content-Security-Policy` header, I have messed up the caches. I have accidentally pushed a change to keep all pages in the cache indefinitely. Situation: browsers are now serving stale pages.
 <!--more-->
 
-https://answers.netlify.com/t/confusing-headers-behaviour/17588/4
+[Netlify custom headers](https://docs.netlify.com/routing/headers/) documentation does not mention that wildcards may [swallow everything](https://answers.netlify.com/t/confusing-headers-behaviour/17588/3?u=c6p), and does not give any examples of pattern use, in practice `/*.*` pattern matches same paths with `/*`. But, while digging forum posts [this post](https://answers.netlify.com/t/format-of-custom-headers-glob/13037/5?u=c6p) come up, though a support engineer mentions it is an unsupported feature.
+```html
+/*
+  Cache-Control: public, max-age=360
+/*.(jpg|jpeg|gif|png|webp|svg)
+  Cache-Control: public, max-age=31536000, immutable
+```
+One can specify it in this manner, take caution, order matters. First pattern matches everything, second one overwrites settings.
 
 ## Cache-Control
 The header controls how long a resource will be kept in browser caches, and when should it be refreshed. A balance is important, to not request same data repeatedly for less bandwidth and better performance, while not serving stale data.
@@ -31,15 +38,15 @@ Cache-Control: public, max-age=31536000, immutable
 **Warning:** Double check resources, they will be kept indefinitely.
 {{< /hint >}}
 
-For a static site, HTML endpoints (URLs) will remain same, though content will be change. We can use several strategies.
+For a static site, HTML endpoints (URLs) will remain same, though content will change. We can use several strategies.
 * Do not cache at all:
-```html
-Cache-Control: no-store, max-age=0
-```
+  ```html
+  Cache-Control: no-store, max-age=0
+  ```
 * Cache only a short time (5 mins):
-```html
-Cache-Control: public, max-age=300
-```
+  ```html
+  Cache-Control: public, max-age=300 xx
+  ```
 
 ## Clear-Site-Data
 The header is still a [working draft](https://www.w3.org/TR/clear-site-data). Even though it seems to be supported, it is not working as advertised in Firefox. Setting it on Chrome removes offline data correctly.
@@ -51,18 +58,9 @@ Attention to the *double quotes*. Other [directives](https://developer.mozilla.o
 {{< /hint >}}
 
 ### What now?
-I need to find another solution, my visitors getting stale pages. Andrews Betts [has several solutions](https://www.fastly.com/blog/clearing-cache-browser). Iframe + POST method from the article should work transparently for same-origin resources cross-browser, to transparently refresh a specific resource stuck in cache.
+Andrews Betts [has several solutions](https://www.fastly.com/blog/clearing-cache-browser). Iframe + POST method from the article should work cross-browser for same-origin resources, to transparently refresh a specific resource stuck in cache.
 
-In my case I don't mind a visible reload, user should see the fresh content immediately, and all the pages generated statically served priorly with wrong `cache-control` headers. I just need to be sure cache-control headers are wrong, then force reload.
-```js
-// fetch current page, only HEAD, with cache busting
-fetch(window.location.href, {method: 'HEAD', cache: "no-store"}).then(
-  function(response) {
-    let cc = response.headers.get("cache-control")
-    if (cc.includes("immutable"))  // pages stuck in cache contain
-      location.reload(true);  // force
-    });
-```
+For now, all the visitors I get are friends. I am going to skip it, but it may come in handy in the future.
 
 [^1]: Modifying URL to replace an existing file that is already cached. 
     * File name versioning (e.g. style.v2.css)

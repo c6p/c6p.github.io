@@ -26,11 +26,13 @@ div.post-meta {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  filter: grayscale(100%);
   border-bottom: 1px solid;
   padding-bottom: .5rem;
 
-  & * { margin: 0; }
+  & * {
+    margin: 0;
+    color: #aaa;
+  }
 }
 h5.date {
   display: inline-block;
@@ -92,7 +94,7 @@ div.categories a::before { content:"@"; }
 }
 
 .book-page {
-  padding: 3rem 0;
+  padding: .5rem 0;
   & > .markdown, & > #posts { margin: auto }
 }
 .markdown { padding: 1rem; }

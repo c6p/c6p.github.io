@@ -156,16 +156,11 @@ ul.pagination {
 }
 
 #book-header {
-  visibility: hidden;
-  position: fixed;
-  max-width: 100vw;
-  top: 0;
-  left: 0;
-  right: 0;
   padding: 0 1.5rem 0 1.5rem;
-  background: rgba(0,0,0,.5);
+  margin-bottom: 1em;
 
   label {
+    visibility: hidden;
     line-height: 0;
     padding: .2em;
     border-radius: .2em;
@@ -345,7 +340,14 @@ aside nav,
   }
 
   #book-header {
+    position: fixed;
     visibility: initial;
+    background: rgba(0,0,0,.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    
+    label { visibility: initial; }
   }
 
   #menu-control:focus ~ main label[for="menu-control"] {
