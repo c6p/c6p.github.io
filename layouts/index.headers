@@ -1,4 +1,14 @@
-*.(jpg|jpeg|gif|png|webp|svg)
+/*.jpg
+  Cache-Control: public, max-age=60, immutable
+/*.png
+  Cache-Control: public, max-age=60, immutable
+/*.webp
+  Cache-Control: public, max-age=60, immutable
+/*.svg
+  Cache-Control: public, max-age=60, immutable
+/*.js
+  Cache-Control: public, max-age=60, immutable
+/*.css
   Cache-Control: public, max-age=60, immutable
 /*
   Cache-Control: public, max-age=300
