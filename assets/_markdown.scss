@@ -177,8 +177,9 @@
   }
 
   figure {
-    text-align: center;
     margin: $padding-16 (-$padding-16);
+    text-align: center;
+    img { margin: 0; }
     figcaption p {
       margin-top: 0;
     }

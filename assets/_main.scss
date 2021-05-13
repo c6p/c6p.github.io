@@ -97,7 +97,6 @@ ul.pagination {
 
 .book-menu {
   flex: 0 0 $menu-width;
-  font-size: $font-size-14;
 
   nav {
     width: $menu-width;
@@ -152,24 +151,26 @@ ul.pagination {
 }
 
 .book-post {
-  margin-bottom: $padding-16 * 2;
+  margin-bottom: $padding-16 * 2.5;
 }
 
 #book-header {
-  display: none;
-  margin-bottom: $padding-16;
+  visibility: hidden;
   position: fixed;
-  width: 100%;
+  max-width: 100vw;
   top: 0;
-  padding: .5rem 1rem 0 2rem;
+  left: 0;
+  right: 0;
+  padding: 0 1.5rem 0 1.5rem;
+  background: rgba(0,0,0,.5);
 
   label {
     line-height: 0;
     padding: .2em;
     border-radius: .2em;
+    filter: brightness(50%);
     border: 1px solid var(--body-font-color);
     background: var(--body-background);
-    opacity: 50%;
   }
 }
 
@@ -215,8 +216,7 @@ ul.pagination {
 }
 
 .book-toc {
-  flex: 0 0 $toc-width;
-  font-size: $font-size-14;
+  flex: 0 0 $menu-width;
 
   nav {
     width: $toc-width;
@@ -317,7 +317,7 @@ aside nav,
 .book-page,
 #book-header,
 .markdown {
-  transition: 0.1s ease-in-out;
+  transition: 0.05s ease-in-out;
   transition-property: transform, margin, opacity, visibility;
   will-change: auto; /*transform, margin, opacity;*/
 }
@@ -336,15 +336,14 @@ aside nav,
   }
 
   .book-toc {
-    visibility: initial;
-    left: 100%;
+    visibility: hidden;
+    flex: 0 0 0;
     font-size: $font-size-base;
     z-index: 1;
-    @include fixed;
   }
 
- #book-header {
-    display: block;
+  #book-header {
+    visibility: initial;
   }
 
   #menu-control:focus ~ main label[for="menu-control"] {
@@ -398,6 +397,8 @@ aside nav,
       right: 0;
     }
   }
+
+  main .book-page { padding-top: 4rem; }
 }
 
 // Extra space for big screens

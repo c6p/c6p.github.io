@@ -62,9 +62,6 @@ div.categories a::before { content:"@"; }
 }
 
 #breadcrumbs { margin: 0 1em; }
-#book-header {
-  background: rgba(0,0,0,.5);
-}
 #posts {
   /*display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -100,11 +97,10 @@ div.categories a::before { content:"@"; }
 }
 .markdown { padding: 1rem; }
 div.highlight { margin: 0 -1rem; }
-figure img { margin: .2em; }
 figure.inline { display: inline-block; }
-figure.right img { float: right; }
-figure.left img { float: left; }
-figure.inline, figure.right, figure.left { margin: 0; }
+figure.right{ float: right; }
+figure.left { float: left; }
+figure.inline, figure.right, figure.left { margin: .1em; }
 
 a.book-btn { margin: .2em .1em; }
 .active { font-weight: bold; }
