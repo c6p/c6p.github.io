@@ -1,17 +1,5 @@
-/*.jpg
-  Cache-Control: public, max-age=60, immutable
-/*.png
-  Cache-Control: public, max-age=60, immutable
-/*.webp
-  Cache-Control: public, max-age=60, immutable
-/*.svg
-  Cache-Control: public, max-age=60, immutable
-/*.js
-  Cache-Control: public, max-age=60, immutable
-/*.css
-  Cache-Control: public, max-age=60, immutable
 /*
-  Cache-Control: public, max-age=300
+  Cache-Control: public, max-age=0
   Clear-Site-Data: "*"
   Strict-Transport-Security: max-age=86400; includeSubDomains; preload
   X-Content-Type-Options: nosniff
@@ -20,3 +8,5 @@
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin
   Permission-Policy: 'self'
+/*.(jpg|jpeg|gif|png|webp|svg)
+  Cache-Control: public, max-age=60, immutable

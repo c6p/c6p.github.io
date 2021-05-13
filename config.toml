@@ -37,6 +37,7 @@ notAlternative = true
   [markup.goldmark]
     [markup.goldmark.extensions]
       footnote = true
+      definitionList = true
     [markup.goldmark.renderer]
       unsafe = true
     [markup.goldmark.parser]

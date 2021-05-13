@@ -97,6 +97,7 @@ ul.pagination {
 
 .book-menu {
   flex: 0 0 $menu-width;
+  font-size: $font-size-14;
 
   nav {
     width: $menu-width;
@@ -151,7 +152,7 @@ ul.pagination {
 }
 
 .book-post {
-  margin-bottom: $padding-16 * 2.5;
+  margin-bottom: $padding-16 * 2;
 }
 
 #book-header {
@@ -217,6 +218,7 @@ ul.pagination {
 
 .book-toc {
   flex: 0 0 $menu-width;
+  font-size: $font-size-14;
 
   nav {
     width: $toc-width;
