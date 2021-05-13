@@ -1,6 +1,8 @@
+*.(jpg|jpeg|gif|png|webp|svg)
+  Cache-Control: public, max-age=60, immutable
 /*
   Cache-Control: public, max-age=300
-  Clear-Site-Data: "cache"
+  Clear-Site-Data: "*"
   Strict-Transport-Security: max-age=86400; includeSubDomains; preload
   X-Content-Type-Options: nosniff
   X-XSS-Protection: 1; mode=block
@@ -8,5 +10,3 @@
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin
   Permission-Policy: 'self'
-/*.*
-  Cache-Control: public, max-age=31536000, immutable
