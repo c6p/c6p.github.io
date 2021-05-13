@@ -110,6 +110,3 @@ object-src 'none'
 * [Google Developer Documentation](https://developers.google.com/web/fundamentals/security/csp)
 * [CSP Quick Reference Guide](https://content-security-policy.com/)
 * [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
-
-*[CSP]: Content Security Policy
-*[XSS]: Cross Site Scripting

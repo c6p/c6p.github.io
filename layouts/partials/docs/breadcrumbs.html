@@ -1,7 +1,7 @@
 {{ $path := "" }}
 <div id="breadcrumbs">
     <a href="{{ .Site.BaseURL | relLangURL }}">Home</a>
-    {{ range (split .URL "/") }}
+    {{ range (split .RelPermalink "/") }}
       {{ $path = print $path . "/" }}
       {{ if and (ne . "") (or (eq . "posts") ($.GetPage $path).WordCount) }}
       / <a href='{{ $path }}'>{{ humanize (replace . "posts" "blog") }}</a>

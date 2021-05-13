@@ -73,14 +73,14 @@ div.categories a::before { content:"@"; }
   .readtime {
     float: left;
     margin-left: 1rem;
-    margin-top: .5em;
+    margin-top: .2em;
   }
   .date {
     float: right;
     margin-right: 1rem;
     .day {
       font-weight:bold;
-      font-size:1.5em
+      font-size:1.2rem
     }
     .month { color: var(--em-font-color); }
   }

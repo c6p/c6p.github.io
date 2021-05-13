@@ -10,7 +10,7 @@ window.onscroll = function() {
   if (prev > cur) {
     header.style.transform = "translateY(0)"
   } else {
-    header.style.transform = "translateY(-5rem)"
+    header.style.transform = "translateY(-3rem)"
   }
   prev = cur
 }

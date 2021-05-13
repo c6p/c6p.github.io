@@ -15,11 +15,11 @@ $border-radius: $padding-4 !default;
 $body-font-weight: normal !default;
 
 $body-min-width: 20rem !default;
-$container-max-width: 84rem !default;
+$container-max-width: 82rem !default;
 
 $header-height: 3.5rem !default;
-$menu-width: 16rem !default;
-$toc-width: 16rem !default;
+$menu-width: 15rem !default;
+$toc-width: 15rem !default;
 
 $mobile-breakpoint: $menu-width + $body-min-width * 1.2 + $toc-width !default;
 
@@ -53,12 +53,14 @@ $hint-colors: (
   --gray-200: rgba(255, 255, 255, 0.2);
   --gray-500: rgba(255, 255, 255, 0.5);
 
-  --color-link:  rgb(88, 166, 255); /*#{desaturate(rgb(255, 180, 84), 5)}; */
+  --color-link:  #{scale-color(rgb(88, 166, 255), $saturation: 50%)};
   --color-visited-link: var(--color-link);
 
   --body-background: #{$body-background};
+  --body-background-lighter: #{lighten($body-background, 3)};
   --body-font-color: #{$body-font-color};
-  --em-font-color: #{$em-font-color};
+  --body-font-color-lighter: #{lighten($body-font-color, 5)};
+  --em-font-color:      #{scale-color(#ffb454, $lightness: 40%, $saturation: 50%)};
 
   --icon-filter: brightness(0) invert(1);
 

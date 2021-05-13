@@ -1,7 +1,6 @@
 @import "variables";
 
 .markdown {
-  max-width: 768px;
   line-height: 1.6;
 
   // remove padding at the beginning of page
@@ -37,7 +36,9 @@
 
   }
 
-  h1:first-child a { color: var(--body-font-color); }
+  h2:first-child, h1:first-child {
+    a { color: var(--body-font-color); }
+  }
 
   h5 { font-size: 0.875em; }
 
@@ -46,7 +47,7 @@
   b,
   optgroup,
   strong {
-    color: #{desaturate(darken($em-font-color, 10), 30)};;
+    color: var(--em-font-color);
   }
 
   em { color: var(--em-font-color); }
@@ -73,13 +74,13 @@
     font-size: 0.875em;
     
     &:not([class]) {
-      color: #{saturate($em-font-color, 20)};
-      background: lighten(#272822, 5);
+      color: var(--em-font-color);
+      background: #272822;
     }
   }
 
   pre {
-    padding: $padding-16;
+    padding: $padding-8 $padding-16;
     background: rgba(240, 246, 252, 0.15);
     border-radius: $border-radius;
     overflow-x: auto;
@@ -120,7 +121,7 @@
     }
 
     tr:nth-child(2n) {
-      background: var(--gray-100);
+      background: var(--body-background-lighter);
     }
   }
 

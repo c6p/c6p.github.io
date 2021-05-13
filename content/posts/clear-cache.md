@@ -60,7 +60,7 @@ Attention to the *double quotes*. Other [directives](https://developer.mozilla.o
 ### What now?
 Andrews Betts [has several solutions](https://www.fastly.com/blog/clearing-cache-browser). Iframe + POST method from the article should work cross-browser for same-origin resources, to transparently refresh a specific resource stuck in cache.
 
-For now, all the visitors I get are friends. I am going to skip it, but it may come in handy in the future.
+For now, all the visitors I get are friends, so a self refresh is a possibility. I am going to skip it, but it may come in handy in the future.
 
 [^1]: Modifying URL to replace an existing file that is already cached. 
     * File name versioning (e.g. style.v2.css)
