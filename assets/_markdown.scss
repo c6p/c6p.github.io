@@ -37,7 +37,10 @@
   }
 
   h2:first-child, h1:first-child {
-    a { color: var(--body-font-color); }
+    a {
+      color: var(--body-font-color);
+      text-decoration: none;
+    }
   }
 
   h5 { font-size: 0.875em; }
@@ -47,19 +50,20 @@
   b,
   optgroup,
   strong {
-    color: var(--em-font-color);
+    color: var(--color-strong);
   }
 
-  em { color: var(--em-font-color); }
+  em { color: var(--color-link); }
 
   a {
-    text-decoration: none;
+    color: var(--body-font-color);
+    text-decoration: underline;
+    /*text-decoration-color: var(--color-visited-link);*/
+    text-underline-offset: .2em;
 
     &:hover {
       text-decoration: underline;
-    }
-    &:visited {
-      color: var(--color-visited-link);
+      text-decoration-color: var(--color-visited-link);
     }
   }
 
@@ -74,7 +78,7 @@
     font-size: 0.875em;
     
     &:not([class]) {
-      color: var(--em-font-color);
+      color: var(--color-link);
       background: #272822;
     }
   }

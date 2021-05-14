@@ -1,25 +1,20 @@
 {{ define "main" }}
   <div id="posts">
   {{ range sort .Paginator.Pages }}
-  {{ $year := .Date.Format "2006" }}
-  {{ $month := .Date.Format "Jan" }}
-  {{ $day := .Date.Format "02" }}
-    <div class="readtime">{{.ReadingTime}} mins</div>
-    <div class="date">
-        <span class="day">{{ $day }}</span>
-        <span class="month">{{ $month }}</span>
-        <span>{{ $year }}</span>
-    </div>
     <article class="markdown book-post">
       <h2>
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       </h2>
-      <p>
+      <div>
         {{- .Summary -}}
-        {{ if .Truncated }}
-          <a class="read-more" href="{{ .RelPermalink }}">read more ...</a>
-        {{ end }}
-      </p>
+      </div>
+      <div class="single-meta">
+          <span>{{ .Date.Format "02 Jan 2006" }}</span>
+          <span>{{ .ReadingTime }} mins</span>
+          <span>{{ if .Truncated }}
+            <a class="read-more" href="{{ .RelPermalink }}">more...</a>
+          {{ end }}</span>
+      </div>
     </article>
   {{ end }}
 </div>

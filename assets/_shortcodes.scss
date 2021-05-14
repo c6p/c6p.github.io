@@ -82,13 +82,10 @@
     color: var(--color-link);
     line-height: $padding-16 * 2;
     padding: 0 $padding-16;
-    border: $padding-1 solid var(--color-link);
+    border: $padding-1 solid var(--color-strong);
     border-radius: $border-radius;
     cursor: pointer;
-
-    &:hover {
-      text-decoration: none;
-    }
+    text-decoration: none;
   }
 
   // {{< hint >}}

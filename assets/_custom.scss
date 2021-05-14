@@ -26,7 +26,6 @@ div.post-meta {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-bottom: 1px solid;
   padding-bottom: .5rem;
 
   & * {
@@ -49,17 +48,14 @@ div.categories a {
 div.tags a::before { content:"#"; }
 div.categories a::before { content:"@"; }
 
-.book-post {
-  & > * {
+#posts .book-post {
+  > * {
+    margin-top: 0em;
+    margin-bottom: .5em;
+  }
+  div:first-of-type > * {
     margin-top: 0em !important;
     margin-bottom: .5em !important;
-  }
-  & div.post-meta {
-    margin: 0 !important;
-    & * { 
-      margin-top: 0 !important;
-      margin-bottom: 0 !important;
-    }
   }
 }
 
@@ -69,22 +65,11 @@ div.categories a::before { content:"@"; }
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-template-rows: masonry;*/
 
-  article { clear: both; }
-  .readtime {
-    float: left;
-    margin-left: 1rem;
-    margin-top: .2em;
+  .single-meta { 
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1em;
   }
-  .date {
-    float: right;
-    margin-right: 1rem;
-    .day {
-      font-weight:bold;
-      font-size:1.2rem
-    }
-    .month { color: var(--em-font-color); }
-  }
-  a.read-more { filter: grayscale(100%); }
   .book-post { border-top: 1px solid gray; }
 }
 .markdown table.pages { 
