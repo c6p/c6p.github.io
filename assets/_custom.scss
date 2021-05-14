@@ -92,3 +92,8 @@ figure.inline, figure.right, figure.left { margin: .1em; }
 a.book-btn { margin: .2em .1em; }
 .active { font-weight: bold; }
 .wrap > pre { white-space: pre-wrap; }
+
+a.footnote-ref, a.footnote-backref {
+  text-decoration: none;
+  color: var(--color-link);
+}
