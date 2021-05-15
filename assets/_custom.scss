@@ -97,3 +97,24 @@ a.footnote-ref, a.footnote-backref {
   text-decoration: none;
   color: var(--color-link);
 }
+
+polygon { fill: transparent; }
+$language: hsl(0,   100%, 80%);
+$course: hsl(35,  100%, 80%);
+$project: hsl(60,  100%, 80%);
+$stack: hsl(100, 100%, 80%);
+$library: hsl(170, 100%, 80%);
+$database: hsl(200, 100%, 80%);
+$method: hsl(240, 100%, 80%);
+.language { fill: $language; color: $language; }
+.library { fill: $library; color: $library; }
+.course { fill: $course; color: $course; }
+.method { fill: $method; color: $method; }
+.project { fill: $project; color: $project; }
+.database { fill: $database; color: $database; }
+.stack { fill: $stack; color: $stack; }
+svg {
+  max-width: 100%;
+  height: auto;
+  .node :nth-child(3), .node a :nth-child(2) { fill: var(--body-font-color); }
+}

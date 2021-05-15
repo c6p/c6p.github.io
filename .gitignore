@@ -1,8 +1,9 @@
 /.venv
 /helpers/exercism
-/docs
+/content-private
 /resources
 /public
+*.dot
 # Local Netlify folder
 .netlify
 .lfsconfig
