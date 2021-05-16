@@ -4,3 +4,8 @@
 {"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qscoop-completion — For CLI completion.\\E$"}
 {"rule":"PUNCTUATION_PARAGRAPH_END","sentence":"^\\QMozilla Observatory security grades\\E$"}
 {"rule":"DASH_RULE","sentence":"^\\Q- Just look for a reasonable domain expert proposing something that sounds wrong.\\E$"}
+{"rule":"TOO_LONG_SENTENCE","sentence":"^\\QVision\nRequirements\nshould:\nbe used offline\nsync across devices seamlessly\neven when multiple devices were offline for a very long time\ncapture any form of data\nreference inner elements of documents\nable to export information\nlet attaching metadata, such as tags or references to other resources\\E$"}
+{"rule":"TOO_LONG_SENTENCE","sentence":"^\\QVision\nRequirements\nshould:\nbe used offline\nsync across devices seamlessly\neven when multiple devices were offline for a very long time\ncapture any form of data\nreference inner elements of documents such as HTML or PDF\nlet attaching metadata, like tags or references to other resources\nable to export information\\E$"}
+{"rule":"PASSIVE_VOICE","sentence":"^\\QOrganize phase: Metadata may be attached while capturing via tags, references, or short notes\nQuery phase:\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QIt supports PDFs, EPUBs, can download HTMLs to annotate them.\\E$"}
+{"rule":"SENTENCE_FRAGMENT","sentence":"^\\QWhen Tauri supports mobile devices we can also target them.\\E$"}

@@ -38,3 +38,11 @@ MathJax
 XMLHttpRequest
 WebSocket
 FlexSearch
+Elisp
+Yakala
+Zettelkasten
+NotAra
+DEVONthink
+WebSockets
+tauri
+Memex

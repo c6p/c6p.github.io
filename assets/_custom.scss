@@ -114,6 +114,7 @@ $method: hsl(240, 100%, 80%);
 .database { fill: $database; color: $database; }
 .stack { fill: $stack; color: $stack; }
 svg {
+  text { font-family: "Arial Narrow"; }
   max-width: 100%;
   height: auto;
   .node :nth-child(3), .node a :nth-child(2) { fill: var(--body-font-color); }
