@@ -75,8 +75,8 @@ div.categories a::before { content:"@"; }
 }
 .markdown table.pages { 
   border-collapse:collapse;
-  td { border-style: none}
-  td:nth-child(3) { border-right-style: solid; }
+  td:nth-child(3) { border-right: $padding-1 solid var(--gray-200); }
+  tr:nth-child(2n) { background: inherit; }
 }
 
 .book-page {

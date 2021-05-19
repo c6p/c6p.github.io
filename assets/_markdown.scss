@@ -121,11 +121,13 @@
     border-collapse: collapse;
     margin-top: $padding-16;
     margin-bottom: $padding-16;
-
+  
+    td { border-style: none; }
+    
+    th { border-bottom: $padding-1 solid var(--gray-200); }
     tr th,
     tr td {
-      padding: $padding-2 $padding-8;
-      border: $padding-1 solid var(--gray-200);
+      padding: $padding-4 $padding-8;
     }
 
     tr:nth-child(2n) {

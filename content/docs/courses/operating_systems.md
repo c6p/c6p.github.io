@@ -46,10 +46,10 @@ graph LR
 These decisions are made by OS **scheduler**.
 
 | Time | Process<sub>0</sub> | Process<sub>1</sub> | Notes                     |
-| ---- | ----------- | ----------- | ------------------------- |
+| :--: | :---------: | :---------: | ------------------------- |
 | 1    | Running     | Ready       |
 | 2    | Running     | Ready       |
-| 3    | Running     | Ready       | Process<sub>0</sub> /subinit>ates I/O |
+| 3    | Running     | Ready       | Process<sub>0</sub> init I/O |
 | 4    | Blocked     | Running     | Process<sub>0</sub> is blocked,   |
 | 5    | Blocked     | Running     | so Process<sub>1</sub> runs       |
 | 6    | Blocked     | Running     |

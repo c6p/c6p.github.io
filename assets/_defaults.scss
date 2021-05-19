@@ -63,7 +63,7 @@ $color: hsl(20, 80%, 75%); /* rgb(241, 172, 144); */
   --body-background: #{$body-background};
   --body-background-lighter: #{lighten($body-background, 4)};
   --body-font-color: #{$body-font-color};
-  --body-font-color-lighter: #{lighten($body-font-color, 5)};
+  --body-font-color-lighter: #{lighten($body-font-color, 10)};
   --body-font-color-darker: #{darken($body-font-color, 10)};
 
   --color-link: #{$color};
