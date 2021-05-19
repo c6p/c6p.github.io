@@ -406,8 +406,8 @@ aside nav,
 
   .markdown {
     > :not(figure):not(.highlight) { 
-      margin-left: Max(calc( (100% - 45rem)/2 ), 2rem);
-      margin-right: Max(calc( (100% - 45rem)/2 ), 2rem);
+      margin-left: Max(calc( (100% - 45rem)/2 ), 1rem);
+      margin-right: Max(calc( (100% - 45rem)/2 ), 1rem);
     }
   }
 }

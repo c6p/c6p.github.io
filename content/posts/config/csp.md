@@ -26,6 +26,7 @@ Our response headers are in `_headers` file at the root of publish directory. Mo
 | `font-src` | for fonts |
 | `script-src` | for scripts, i.e. JavaScript |
 | `style-src` | for styles, i.e. CSS |
+| `frame-src` | for iframes |
 | `connect-src` | e.g. XMLHttpRequest, WebSocket |
 | `object-src` | for plugins, e.g. Flash, Silverlight |
 
