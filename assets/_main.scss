@@ -7,7 +7,7 @@ html {
 body {
   min-width: $body-min-width;
   color: var(--body-font-color-lighter);
-  background: var(--body-background-lighter);
+  background: var(--body-background);
 
   font-weight: $body-font-weight;
   text-rendering: optimizeLegibility;
@@ -19,7 +19,7 @@ body {
     box-sizing: inherit;
   }
 
-  nav { background: var(--body-background-lighter); }
+  nav { background: var(--body-background); }
 }
 
 h1,
@@ -403,6 +403,21 @@ aside nav,
   }
 
   main .book-page { padding-top: 4rem; }
+
+  .markdown {
+    > :not(figure):not(.highlight) { 
+      margin-left: Max(calc( (100% - 45rem)/2 ), 2rem);
+      margin-right: Max(calc( (100% - 45rem)/2 ), 2rem);
+    }
+  }
+}
+@media screen and (min-width: $mobile-breakpoint) {
+  .markdown {
+    > :not(figure):not(.highlight) { 
+      margin-left: Max(calc( (100% - 45rem)/2 ), 2rem);
+      margin-right: Max(calc( (100% - 45rem)/2 ), 2rem);
+    }
+  }
 }
 
 // Extra space for big screens

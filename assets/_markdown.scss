@@ -2,7 +2,11 @@
 
 .markdown {
   line-height: 1.6;
+  padding: 1rem 0;
 
+  > :not(figure):not(.highlight) {
+    max-width: 45rem;
+  }
   // remove padding at the beginning of page
   > :first-child {
     margin-top: 0;
@@ -182,7 +186,7 @@
   }
 
   figure {
-    margin: $padding-16 (-$padding-16);
+    margin: $padding-16 0;
     text-align: center;
     img { margin: 0; }
     figcaption p {

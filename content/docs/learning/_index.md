@@ -12,6 +12,9 @@ Scale and number is level of completion for a
 <span class="course">course</span>.
 
 Underlined labels link to my notes on the subject. Arrows coarsely represent relation.
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BenchNine:wght@400;700&display=swap" rel="stylesheet"> 
 <figure>
 {{< include "/assets/skills.svg" >}}
 </figure>

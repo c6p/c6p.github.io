@@ -13,5 +13,7 @@ I am Can Altıparmak, and this is my log/notebook.
 
 ## Projects
 Games made for {{< button href="https://withkoji.com/@c6p" >}}koji{{< /button >}}
+<div>
 {{< figure src="/images/dotslice.png" caption="Dot Slice" link="https://withkoji.com/~c6p/dot-slice" class="inline" width=96 height=96 >}}
 {{< figure src="/images/swingingfrog.webp" caption="Swinging Frog" link="https://withkoji.com/~c6p/swinging-frog" class="inline" width=96 height=96 >}}
+</div>

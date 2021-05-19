@@ -1,12 +1,11 @@
 ---
 title: "Yakala — capture everything"
 date: 2021-05-16T10:31:03+03:00
-categories: [project/Yakala]
+categories: [project/NotAra]
 ---
 Years ago I had difficulty in taking notes and capturing information, and couldn't find anything to fit my needs. I tried to create a cross-platform application to fill the gap: [**NotAra**](/categories/project/notara). I faced technological problems, life intervened, and the project just got stuck. Today, I am not even sure, whether I pushed all local changes to GitHub. 
-
-Anyways, in the meantime, apps to fill the niche has emerged. As you can tell from NotAra screenshots, [Polar](https://getpolarized.io/) is what I had in mind to capture information. But the name NotAra means "Note Search", so the process did not stop with capturing data, but using that information to easily create cross-linked notes[^1]. Note-taking I envisioned is similar to [Obsidan](https://obsidian.md/) today.
 <!--more-->
+Anyways, in the meantime, apps to fill the niche has emerged. As you can tell from NotAra screenshots, [Polar](https://getpolarized.io/) is what I had in mind to capture information. But the name NotAra means "Note Search", so the process did not stop with capturing data, but using that information to easily create cross-linked notes[^1]. Note-taking I envisioned is similar to [Obsidan](https://obsidian.md/) today.
 [^1]: [Zettelkasten](https://en.wikipedia.org/wiki/Zettelkasten)
 
  During the passing years, many projects have popped up. Trying them out made me realize something. *Capturing* information and *writing* are two different processes that requires different states of mind. The essence of [Unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy) did not transfer well to the world of GUI, so we ended up with unmaintained cemetery of monoliths, while the same Unix tools just as alive as they were 50 years ago.
