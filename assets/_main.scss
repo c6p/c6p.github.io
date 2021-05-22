@@ -78,7 +78,6 @@ ul.pagination {
 }
 
 .container {
-  max-width: $container-max-width;
   margin: 0 auto;
 }
 
@@ -404,27 +403,25 @@ aside nav,
 
   main .book-page { padding-top: 4rem; }
 
-  .markdown {
-    > :not(figure):not(.highlight) { 
-      margin-left: Max(calc( (100% - 45rem)/2 ), 1rem);
-      margin-right: Max(calc( (100% - 45rem)/2 ), 1rem);
-    }
+  .post-meta,
+  .markdown > :not(figure):not(.highlight) { 
+    margin-left: Max(calc( (100% - 45rem)/2 ), 1rem);
+    margin-right: Max(calc( (100% - 45rem)/2 ), 1rem);
   }
 }
 @media screen and (min-width: $mobile-breakpoint) {
-  .markdown {
-    > :not(figure):not(.highlight) { 
-      margin-left: Max(calc( (100% - 45rem)/2 ), 2rem);
-      margin-right: Max(calc( (100% - 45rem)/2 ), 2rem);
-    }
+  .post-meta,
+  .markdown > :not(figure):not(.highlight) { 
+    margin-left: Max(calc( (100% - 45rem)/2 ), 2rem);
+    margin-right: Max(calc( (100% - 45rem)/2 ), 2rem);
   }
 }
 
 // Extra space for big screens
-@media screen and (min-width: $container-max-width) {
+/*@media screen and (min-width: $container-max-width) {
   .book-page,
   .book-menu nav,
   .book-toc nav {
     padding: $padding-16 $padding-8;
   }
-}
+}*/

@@ -4,7 +4,6 @@ theme = "book"
 
 [params]
 BookTheme = "dark"
-BookLogo = "/svg/home.svg"
 BookDateFormat = '2 Jan 2006 - 15:04'
 
 #[server]

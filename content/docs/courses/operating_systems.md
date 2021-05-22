@@ -40,6 +40,7 @@ graph LR
     R-->|I/O initiate|B
     B-->|I/O done|E
 {{</mermaid>}}
+
 **Running**: executing instructions  
 **Ready**: ready, but OS has chosen not to run  
 **Blocked**: not ready. I/O request etc.  

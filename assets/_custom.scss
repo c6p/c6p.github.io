@@ -71,7 +71,6 @@ div.categories a::before { content:"@"; }
     margin-top: 1em;
     color: var(--body-font-color-darker);
   }
-  .book-post { border-top: 1px solid gray; }
 }
 .markdown table.pages { 
   border-collapse:collapse;
@@ -83,7 +82,12 @@ div.categories a::before { content:"@"; }
   padding: .5rem 0;
   & > .markdown, & > #posts { margin: auto }
 }
-div.highlight { margin: 0; }
+div.highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: auto;
+}
 figure.inline { display: inline-block; }
 figure.right{ float: right; }
 figure.left { float: left; }

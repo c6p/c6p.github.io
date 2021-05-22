@@ -88,14 +88,16 @@
   }
 
   pre {
-    padding: $padding-8 $padding-16;
+    padding: 0;
     background: rgba(240, 246, 252, 0.15);
     border-radius: $border-radius;
-    overflow-x: auto;
+    max-width: 100%;
+    min-width: Min(45rem, 100%);
 
     code {
-      padding: 0;
-      background: none;
+      padding: $padding-8 $padding-16;
+      background: #272822;
+      display: inline-block;
     }
   }
 
