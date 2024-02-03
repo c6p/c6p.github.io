@@ -23,23 +23,16 @@
 {{- $searchJSFile := printf "%s.search.js" .Language.Lang -}}
 {{- $searchJS := resources.Get "search.js" | resources.ExecuteAsTemplate $searchJSFile . -}}
 {{- $mathjax := resources.Get "mathjax.js" -}}
-{{- $koji := resources.Get "koji.js" -}}
 {{- $header := resources.Get "hide-header.js" -}}
-{{ with (slice $header $mathjax $searchJS $koji | resources.Concat "bundle.js" | minify | fingerprint) }}
+{{ with (slice $header $mathjax $searchJS | resources.Concat "bundle.js" | minify | fingerprint) }}
 <script defer src="{{.RelPermalink}}" integrity="{{ .Data.Integrity }}"></script>
 {{ end }}
 {{ if (findRE "(\\\\(.+\\\\)|\\\\[.+\\\\])" .Content 1) }}
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-mml-chtml.js"
   integrity="sha256-ncNI9OXOS5Ek4tzVYiOMmN/KKCPZ6V0Cpv2P/zHntiA=" crossorigin="anonymous"></script>
 {{ end }}
-<script src="ui.js"></script>
 
 <!-- RSS -->
 {{- with .OutputFormats.Get "rss" -}}
 {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
-
-{{ "<!--" | safeHTML }}
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
-{{ "-->" | safeHTML }}

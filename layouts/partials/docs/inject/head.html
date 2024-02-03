@@ -1,0 +1,6 @@
+{{ if .Param "koji" }}
+{{ with (resources.Get "koji.js" | minify | fingerprint) }}
+<script defer src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}"></script>
+{{ end }}
+<script defer src="/replay/ui.js"></script>
+{{ end }}

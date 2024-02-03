@@ -1,0 +1,13 @@
+{{ if .Param "koji" }}
+<dialog id="archiveDialog">
+  <div style="position:relative">
+    <span
+      style="position:absolute;color:var(--body-font-color);background:var(--body-background);text-align:center;width:100%;margin:0;padding:.5rem">
+      The Koji site is officially sunset.
+      <a href="https://withkoji.com/koji-shutdown">🔗</a>
+      This web archive is from January 17, 2024.
+    </span>
+  </div>
+  <replay-web-page embed="replayonly" source="koji.wacz" sandbox=true></replay-web-page>
+</dialog>
+{{ end }}
