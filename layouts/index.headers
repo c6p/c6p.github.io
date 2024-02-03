@@ -3,8 +3,8 @@
   Strict-Transport-Security: max-age=86400; includeSubDomains; preload
   X-Content-Type-Options: nosniff
   X-XSS-Protection: 1; mode=block
-  Content-Security-Policy: default-src 'none'; base-uri 'self'; manifest-src 'self'; connect-src 'self'; frame-src gfycat.com; font-src 'self' cdn.jsdelivr.net fonts.gstatic.com; img-src 'self' data:; script-src {{readFile "data/inline_script_hash.txt"}} 'self' {{readFile "data/external_script_source.txt"}}; style-src 'self' 'unsafe-inline' cdn.jsdelivr.net fonts.googleapis.com; object-src 'none'
-  X-Frame-Options: DENY
+  Content-Security-Policy: default-src 'none'; base-uri 'self'; manifest-src 'self'; connect-src 'self'; frame-src 'self'; font-src 'self' cdn.jsdelivr.net fonts.gstatic.com; img-src 'self' data:; script-src {{readFile "data/inline_script_hash.txt"}} 'self' {{readFile "data/external_script_source.txt"}}; style-src 'self' 'unsafe-inline' cdn.jsdelivr.net fonts.googleapis.com
+  X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin
   Permission-Policy: 'self'
 /*.(jpg|jpeg|gif|png|webp|svg)

@@ -26,5 +26,5 @@ Games made for {{< button class="koji" href="https://withkoji.com/@c6p" >}}koji{
     This web archive is from January 17, 2024.
   </span>
 </div>
-<replay-web-page embed="replayonly" source="koji.wacz" ></replay-web-page>
+<replay-web-page embed="replayonly" source="koji.wacz" sandbox=true></replay-web-page>
 </dialog>
