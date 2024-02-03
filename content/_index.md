@@ -12,8 +12,19 @@ I am Can Altıparmak, and this is my log/notebook.
 {{< button href="https://aur.archlinux.org/packages/?O=0&SeB=M&K=c6p" >}}{{< icon archlinux >}} AUR{{< /button >}}
 
 ## Projects
-Games made for {{< button href="https://withkoji.com/@c6p" >}}koji{{< /button >}}
+Games made for {{< button class="koji" href="https://withkoji.com/@c6p" >}}koji{{< /button >}}
 <div>
-{{< figure src="/images/dotslice.png" caption="Dot Slice" link="https://withkoji.com/~c6p/dot-slice" class="inline" width=96 height=96 >}}
-{{< figure src="/images/swingingfrog.webp" caption="Swinging Frog" link="https://withkoji.com/~c6p/swinging-frog" class="inline" width=96 height=96 >}}
+{{< figure src="/images/dotslice.png" caption="Dot Slice" link="https://withkoji.com/@c6p/dot-slice" class="inline koji" width=96 height=96 >}}
+{{< figure src="/images/swingingfrog.webp" caption="Swinging Frog" link="https://withkoji.com/@c6p/swinging-frog" class="inline koji" width=96 height=96 >}}
 </div>
+
+<dialog id="archiveDialog">
+<div style="position:relative">
+  <span style="position:absolute;color:var(--body-font-color);background:var(--body-background);text-align:center;width:100%;margin:0;padding:.5rem">
+    The main Koji site is now officially sunset.
+    <a href="https://withkoji.com/koji-shutdown">🔗</a>
+    This web archive is from January 17, 2024.
+  </span>
+</div>
+<replay-web-page embed="replayonly" source="koji.wacz" ></replay-web-page>
+</dialog>

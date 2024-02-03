@@ -7,18 +7,35 @@
   position: relative;
   vertical-align: sub;
 }
-.hidden { display: none; }
+
+.hidden {
+  display: none;
+}
+
 img.thumb {
   max-width: calc(min(400px, 100%));
   max-height: 192px;
 }
+
 table#resource th:nth-child(1),
-table#resource th:nth-child(2) { width: 10%; }
-table#resource th:nth-child(3) { width: 30%; }
-table#resource th:nth-child(4) { width: 50%; }
+table#resource th:nth-child(2) {
+  width: 10%;
+}
+
+table#resource th:nth-child(3) {
+  width: 30%;
+}
+
+table#resource th:nth-child(4) {
+  width: 50%;
+}
+
 @media only screen and (max-width: 500px) {
-	table#resource tr > :nth-child(1),
-	table#resource tr > :nth-child(2) { display: none; }
+
+  table#resource tr> :nth-child(1),
+  table#resource tr> :nth-child(2) {
+    display: none;
+  }
 }
 
 /* post-meta */
@@ -33,10 +50,12 @@ div.post-meta {
     color: var(--body-font-color-darker);
   }
 }
+
 h5.date {
   display: inline-block;
   margin: 0;
 }
+
 div.tags a,
 div.categories a {
   display: inline-block;
@@ -45,81 +64,179 @@ div.categories a {
   padding: 0;
   margin: 0 0.1em;
 }
-div.tags a::before { content:"#"; }
-div.categories a::before { content:"@"; }
+
+div.tags a::before {
+  content: "#";
+}
+
+div.categories a::before {
+  content: "@";
+}
 
 #posts .book-post {
-  > * {
+  >* {
     margin-top: 0em;
     margin-bottom: .5em;
   }
-  div:first-of-type > * {
+
+  div:first-of-type>* {
     margin-top: 0em !important;
     margin-bottom: .5em !important;
   }
 }
 
-#breadcrumbs { margin: 0 1em; }
-#posts {
-  /*display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-template-rows: masonry;*/
+#breadcrumbs {
+  margin: 0 1em;
+}
 
-  .single-meta { 
+#posts {
+
+  .single-meta {
     display: flex;
     justify-content: space-around;
     margin-top: 1em;
     color: var(--body-font-color-darker);
   }
 }
-.markdown table.pages { 
-  border-collapse:collapse;
-  td:nth-child(3) { border-right: $padding-1 solid var(--gray-200); }
-  tr:nth-child(2n) { background: inherit; }
+
+.markdown table.pages {
+  border-collapse: collapse;
+
+  td:nth-child(3) {
+    border-right: $padding-1 solid var(--gray-200);
+  }
+
+  tr:nth-child(2n) {
+    background: inherit;
+  }
 }
 
 .book-page {
   padding: .5rem 0;
-  & > .markdown, & > #posts { margin: auto }
+
+  &>.markdown,
+  &>#posts {
+    margin: auto
+  }
 }
+
 div.highlight {
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-x: auto;
 }
-figure.inline { display: inline-block; }
-figure.right{ float: right; }
-figure.left { float: left; }
-figure.inline, figure.right, figure.left { margin: .1em; }
 
-a.book-btn { margin: .2em .1em; }
-.active { font-weight: bold; }
-.wrap > pre { white-space: pre-wrap; }
+figure.inline {
+  display: inline-block;
+}
 
-a.footnote-ref, a.footnote-backref {
+figure.right {
+  float: right;
+}
+
+figure.left {
+  float: left;
+}
+
+figure.inline,
+figure.right,
+figure.left {
+  margin: .1em;
+}
+
+a.book-btn {
+  margin: .2em .1em;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.wrap>pre {
+  white-space: pre-wrap;
+}
+
+a.footnote-ref,
+a.footnote-backref {
   text-decoration: none;
   color: var(--color-link);
 }
 
-polygon { fill: transparent; }
-$language: hsl(0,   100%, 80%);
-$course: hsl(35,  100%, 80%);
-$project: hsl(60,  100%, 80%);
+polygon {
+  fill: transparent;
+}
+
+$language: hsl(0, 100%, 80%);
+$course: hsl(35, 100%, 80%);
+$project: hsl(60, 100%, 80%);
 $stack: hsl(100, 100%, 80%);
 $library: hsl(170, 100%, 80%);
 $database: hsl(200, 100%, 80%);
 $method: hsl(240, 100%, 80%);
-.language { fill: $language; color: $language; }
-.library { fill: $library; color: $library; }
-.course { fill: $course; color: $course; }
-.method { fill: $method; color: $method; }
-.project { fill: $project; color: $project; }
-.database { fill: $database; color: $database; }
-.stack { fill: $stack; color: $stack; }
+
+.language {
+  fill: $language;
+  color: $language;
+}
+
+.library {
+  fill: $library;
+  color: $library;
+}
+
+.course {
+  fill: $course;
+  color: $course;
+}
+
+.method {
+  fill: $method;
+  color: $method;
+}
+
+.project {
+  fill: $project;
+  color: $project;
+}
+
+.database {
+  fill: $database;
+  color: $database;
+}
+
+.stack {
+  fill: $stack;
+  color: $stack;
+}
+
 svg {
-  text { font-family: BenchNine; }
+  text {
+    font-family: BenchNine;
+  }
+
   max-width: 100%;
   height: auto;
-  .node :nth-child(3), .node a :nth-child(2) { fill: var(--body-font-color); }
+
+  .node :nth-child(3),
+  .node a :nth-child(2) {
+    fill: var(--body-font-color);
+  }
+}
+
+#archiveDialog {
+  display: absolute;
+  z-index: 100;
+  left: 1rem;
+  top: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  width: 100vh;
+  height: 100vh;
+  padding: .2rem;
+  background-color: var(--body-background-lighter);
+}
+
+#archiveDialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
 }

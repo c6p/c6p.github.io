@@ -9,10 +9,10 @@
 
 {{- $manifest := resources.Get "manifest.json" | resources.ExecuteAsTemplate "manifest.json" . }}
 <link rel="manifest" href="{{ $manifest.RelPermalink }}">
-<link rel="icon" href="{{ "favicon.png" | relURL }}" type="image/x-icon">
+<link rel="icon" href="{{ " favicon.png" | relURL }}" type="image/x-icon">
 
 {{- range .Translations }}
-<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ partial "docs/title" . }}">
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ partial " docs/title" . }}">
 {{ end -}}
 
 <!-- Theme stylesheet, you can customize scss by creating `assets/custom.scss` in your website -->
@@ -23,17 +23,21 @@
 {{- $searchJSFile := printf "%s.search.js" .Language.Lang -}}
 {{- $searchJS := resources.Get "search.js" | resources.ExecuteAsTemplate $searchJSFile . -}}
 {{- $mathjax := resources.Get "mathjax.js" -}}
+{{- $koji := resources.Get "koji.js" -}}
 {{- $header := resources.Get "hide-header.js" -}}
-{{ with (slice $header $mathjax $searchJS | resources.Concat "bundle.js" | minify | fingerprint) }}
+{{ with (slice $header $mathjax $searchJS $koji | resources.Concat "bundle.js" | minify | fingerprint) }}
 <script defer src="{{.RelPermalink}}" integrity="{{ .Data.Integrity }}"></script>
 {{ end }}
 {{ if (findRE "(\\\\(.+\\\\)|\\\\[.+\\\\])" .Content 1) }}
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-mml-chtml.js" integrity="sha256-ncNI9OXOS5Ek4tzVYiOMmN/KKCPZ6V0Cpv2P/zHntiA=" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-mml-chtml.js"
+  integrity="sha256-ncNI9OXOS5Ek4tzVYiOMmN/KKCPZ6V0Cpv2P/zHntiA=" crossorigin="anonymous"></script>
 {{ end }}
+<script defer src="https://cdn.jsdelivr.net/npm/replaywebpage@1.8.14/ui.js"
+  integrity="sha256-CnRjxXHluJvKimd4XWAGc6WNApxBGv8XQfs1TBf8+hA=" crossorigin="anonymous"></script>
 
 <!-- RSS -->
 {{- with .OutputFormats.Get "rss" -}}
-  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
 
 {{ "<!--" | safeHTML }}
