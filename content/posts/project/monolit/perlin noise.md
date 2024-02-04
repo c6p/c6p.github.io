@@ -10,4 +10,4 @@ To generate the terrain I have used the *perlin noise*, a method that have becom
 
 Perlin noise is a type of coherent noise, maybe the most famous. Functions that we call coherent noises results in random structures with short term order. Another advantage of them is repeatable maps by producing same results for same 'seed' and coordinates.
 
-{{< gfycat gravecooperativeantelopegroundsquirrel >}}
+{{< gfycat GraveCooperativeAntelopegroundsquirrel >}}
