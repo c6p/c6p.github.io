@@ -44,6 +44,7 @@ div.post-meta {
   justify-content: space-around;
   align-items: center;
   padding-bottom: .5rem;
+  font-size: .9rem;
 
   & * {
     margin: 0;
@@ -51,7 +52,7 @@ div.post-meta {
   }
 }
 
-h5.date {
+h4.date {
   display: inline-block;
   margin: 0;
 }
@@ -60,7 +61,6 @@ div.tags a,
 div.categories a {
   display: inline-block;
   font-weight: 700;
-  font-size: .8em;
   padding: 0;
   margin: 0 0.1em;
 }
@@ -97,6 +97,14 @@ div.categories a::before {
     margin-top: 1em;
     color: var(--body-font-color-darker);
   }
+}
+
+div.post-meta,
+#posts .single-meta {
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .markdown table.pages {
@@ -145,8 +153,17 @@ figure.left {
   margin: .1em;
 }
 
+.book-post h2:first-child {
+  border-left: 0.3rem solid var(--body-font-color-darker);
+  padding-left: 1rem;
+}
+
 a.book-btn {
   margin: .2em .1em;
+}
+
+a.book-btn:hover {
+  background: var(--body-background-lighter);
 }
 
 .active {

@@ -15,11 +15,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   box-sizing: border-box;
+
   * {
     box-sizing: inherit;
   }
 
-  nav { background: var(--body-background); }
+  nav {
+    background: var(--body-background);
+  }
 }
 
 h1,
@@ -40,10 +43,11 @@ img {
   vertical-align: baseline;
 }
 
-nav#TableOfContents > ul {
+nav#TableOfContents>ul {
   padding-left: .5em;
   border-left: 1px solid var(--body-font-color);
 }
+
 aside nav ul {
   padding: 0;
   margin: 0;
@@ -88,6 +92,13 @@ ul.pagination {
 .book-brand {
   margin-top: 0;
 
+  span {
+    background: radial-gradient(ellipse farthest-corner at center center, var(--color-link) 0%, var(--body-font-color-lighter) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   img {
     height: 1.5em;
     width: auto;
@@ -118,11 +129,11 @@ ul.pagination {
     color: var(--color-link);
   }
 
-  input.toggle + label + ul {
+  input.toggle+label+ul {
     display: none;
   }
 
-  input.toggle:checked + label + ul {
+  input.toggle:checked+label+ul {
     display: block;
   }
 }
@@ -134,13 +145,13 @@ ul.pagination {
     margin-top: $padding-16 * 2;
   }
 
-  > a,
-  > span,
-  > label {
+  >a,
+  >span,
+  >label {
     font-weight: bolder;
   }
 
-  > ul {
+  >ul {
     padding-inline-start: 0;
   }
 }
@@ -185,7 +196,7 @@ ul.pagination {
     background: var(--gray-100);
     color: var(--body-font-color);
 
-    &:required + .book-search-spinner {
+    &:required+.book-search-spinner {
       display: block;
     }
   }
@@ -232,7 +243,7 @@ ul.pagination {
     height: 1em;
   }
 
-  nav > ul > li:first-child {
+  nav>ul>li:first-child {
     margin-top: 0;
   }
 }
@@ -315,10 +326,12 @@ aside nav,
 .markdown {
   transition: 0.05s ease-in-out;
   transition-property: transform, margin, opacity, visibility;
-  will-change: auto; /*transform, margin, opacity;*/
+  will-change: auto;
+  /*transform, margin, opacity;*/
 }
 
 @media screen and (max-width: $mobile-breakpoint) {
+
   #menu-control,
   #toc-control {
     display: inline;
@@ -345,15 +358,17 @@ aside nav,
     top: 0;
     left: 0;
     right: 0;
-    
-    label { visibility: initial; }
+
+    label {
+      visibility: initial;
+    }
   }
 
-  #menu-control:focus ~ main label[for="menu-control"] {
+  #menu-control:focus~main label[for="menu-control"] {
     @include outline;
   }
 
-  #menu-control:checked ~ main {
+  #menu-control:checked~main {
     .book-menu {
       visibility: initial;
     }
@@ -377,11 +392,11 @@ aside nav,
     }
   }
 
-  #toc-control:focus ~ main label[for="toc-control"] {
+  #toc-control:focus~main label[for="toc-control"] {
     @include outline;
   }
 
-  #toc-control:checked ~ main {
+  #toc-control:checked~main {
     .book-toc {
       visibility: initial;
     }
@@ -401,19 +416,23 @@ aside nav,
     }
   }
 
-  main .book-page { padding-top: 4rem; }
+  main .book-page {
+    padding-top: 4rem;
+  }
 
   .post-meta,
-  .markdown > :not(figure):not(.highlight) { 
-    margin-left: Max(calc( (100% - 45rem)/2 ), 1rem);
-    margin-right: Max(calc( (100% - 45rem)/2 ), 1rem);
+  .markdown> :not(figure):not(.highlight) {
+    margin-left: Max(calc((100% - 45rem)/2), 1rem);
+    margin-right: Max(calc((100% - 45rem)/2), 1rem);
   }
 }
+
 @media screen and (min-width: $mobile-breakpoint) {
+
   .post-meta,
-  .markdown > :not(figure):not(.highlight) { 
-    margin-left: Max(calc( (100% - 45rem)/2 ), 2rem);
-    margin-right: Max(calc( (100% - 45rem)/2 ), 2rem);
+  .markdown> :not(figure):not(.highlight) {
+    margin-left: Max(calc((100% - 45rem)/2), 2rem);
+    margin-right: Max(calc((100% - 45rem)/2), 2rem);
   }
 }
 

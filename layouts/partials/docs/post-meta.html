@@ -1,14 +1,14 @@
 <div class="post-meta">
-{{ range $taxonomy, $_ := .Site.Taxonomies }}
+  {{ range $taxonomy, $_ := .Site.Taxonomies }}
   {{ with $terms := $.GetTerms $taxonomy }}
   <div class="{{ $taxonomy }}">
     {{ range $n, $term := $terms }}{{ if $n }} {{ end }}
-      <a href="{{ $term.RelPermalink }}">{{ $term.Title }}</a>
+    <a href="{{ $term.RelPermalink }}">{{ $term.Title }}</a>
     {{- end }}
   </div>
   {{ end }}
-{{ end }}
-{{ with .Date}}
-  <h5 class="date">{{ partial "docs/date" (dict "Date" . "Format" $.Site.Params.BookDateFormat) }}</h5>
-{{ end }}
+  {{ end }}
+  {{ with .Date}}
+  <h4 class="date">{{ partial "docs/date" (dict "Date" . "Format" $.Site.Params.BookDateFormat) }}</h4>
+  {{ end }}
 </div>
